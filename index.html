@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAIME GOMEZ – Performance Training</title>
+
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700;900&family=Rajdhani:wght@600;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Iconos Lucide (mismos que en el original React) -->
+  <script src="https://unpkg.com/lucide@0.487.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR PERSONALIZADO
+  ═══════════════════════════════════════════ -->
+  <div id="cursor"></div>
+
+  <!-- ═══════════════════════════════════════════
+       FONDO GLOBAL (mesh gradient fijo)
+  ═══════════════════════════════════════════ -->
+  <div class="mesh-gradient" style="position:fixed;z-index:0;">
+    <div class="mesh-blob mesh-blob-1"></div>
+    <div class="mesh-blob mesh-blob-2"></div>
+    <div class="mesh-blob mesh-blob-3"></div>
+    <div class="mesh-blob mesh-blob-4"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVEGACIÓN
+  ═══════════════════════════════════════════ -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <div class="nav-logo-icon">
+          <i data-lucide="flame" style="width:24px;height:24px;color:#000;"></i>
+        </div>
+        <div class="nav-logo-text">
+          <div class="nav-logo-name">JAIME GOMEZ</div>
+          <div class="nav-logo-sub">PERFORMANCE TRAINING</div>
+        </div>
+      </div>
+
+      <!-- Links (solo en pantallas grandes) -->
+      <div class="nav-links">
+        <a href="#servicios" class="nav-link">SERVICIOS</a>
+        <a href="#metodo"    class="nav-link">MÉTODO</a>
+        <a href="#casos"     class="nav-link">CASOS</a>
+      </div>
+
+      <button class="btn-primary magnetic-btn">RESERVA TU PLAZA</button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="hero">
+    <!-- Partículas (canvas) -->
+    <canvas id="particles" style="position:absolute;inset:0;pointer-events:none;opacity:0.6;z-index:1;"></canvas>
+
+    <!-- Formas flotantes -->
+    <div class="floating-elements">
+      <div class="float-el"></div>
+      <div class="float-el"></div>
+      <div class="float-el"></div>
+      <div class="float-el"></div>
+      <div class="float-el"></div>
+      <div class="float-el"></div>
+    </div>
+
+    <!-- Imagen diagonal -->
+    <div class="hero-image-wrap" id="hero-image-wrap">
+      <img
+        src="media/yocorriendo.JPEG"
+        alt="Jaime Gomez corriendo"
+        id="hero-img"
+      />
+      <div class="hero-overlay-lr"></div>
+      <div class="hero-overlay-bt"></div>
+    </div>
+
+    <!-- Texto gigante que rota al hacer scroll -->
+    <div id="hero-bg-text">TRAIN</div>
+
+    <!-- Etiqueta lateral vertical -->
+    <div class="hero-side-label">
+      <div class="hero-line"></div>
+      <span class="hero-label-text">MADRID · 2026</span>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="hero-content">
+      <div style="max-width:1200px;">
+
+        <!-- Badge -->
+        <div class="hero-badge">
+          <div class="pulse-dot"></div>
+          <div class="hero-badge-line"></div>
+          <span class="hero-badge-text">ELITE · PERFORMANCE TRAINING</span>
+        </div>
+
+        <!-- Título -->
+        <h1 class="hero-title">
+          <span class="hero-word">SUPERA</span>
+          <span class="hero-word hero-word-accent">
+            TUS
+            <div class="hero-word-underline"></div>
+          </span>
+          <span class="hero-word-gradient">LÍMITES</span>
+        </h1>
+
+        <!-- Línea decorativa -->
+        <div class="hero-divider"></div>
+
+        <!-- Descripción -->
+        <p class="hero-desc">
+          Entrenamiento de élite para <strong>running</strong>, <strong>trail</strong>, <strong>oposiciones</strong> y <strong>fitness</strong>.
+          <small>Metodología probada · Fuerza funcional · Resultados garantizados</small>
+        </p>
+
+        <!-- Botones -->
+        <div class="hero-ctas">
+          <button class="btn-hero magnetic-btn">
+            EVALÚA TU NIVEL
+            <i data-lucide="arrow-right" style="width:22px;height:22px;"></i>
+          </button>
+
+          <div class="btn-free">
+            <div class="btn-free-icon">
+              <div class="btn-free-ring"></div>
+              <i data-lucide="zap" style="width:22px;height:22px;color:var(--primary);position:relative;z-index:1;"></i>
+            </div>
+            <div>
+              <div class="btn-free-label">100% GRATIS</div>
+              <div class="btn-free-sub">Primera evaluación</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estadísticas con contador animado -->
+        <div class="hero-stats">
+          <div>
+            <span class="stat-value" data-counter="250" data-suffix="+">250+</span>
+            <span class="stat-label">Atletas</span>
+          </div>
+          <div>
+            <span class="stat-value" data-counter="92" data-suffix="%">92%</span>
+            <span class="stat-label">Éxito</span>
+          </div>
+          <div>
+            <span class="stat-value" data-counter="15" data-suffix="+">15+</span>
+            <span class="stat-label">Años</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="scroll-indicator">
+      <span class="scroll-text">SCROLL</span>
+      <div class="scroll-wheel">
+        <div class="scroll-ball"></div>
+      </div>
+    </div>
+    <div class="section-wave wave-to-black"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICIOS
+  ═══════════════════════════════════════════ -->
+  <section id="servicios">
+    <div class="animated-grid" id="grid-servicios"></div>
+
+    <div class="section-inner">
+
+      <!-- Cabecera -->
+      <div class="services-header">
+        <div class="reveal-left">
+          <div class="section-tag">
+            <div class="section-tag-line"></div>
+            <span class="section-tag-text">ESPECIALIDADES</span>
+          </div>
+          <h2 class="section-title">
+            ENTRENO<br>
+            <span class="text-gradient">TU OBJETIVO</span>
+          </h2>
+          <div style="height:6px;background:linear-gradient(to right,var(--primary),#9b1d2a,transparent);border-radius:9999px;width:75%;margin-top:40px;"></div>
+        </div>
+        <div class="services-header-desc reveal-right">
+          <p>Cada meta requiere un plan específico. Oposiciones, maratones o ultra trails: tengo la metodología científica para llevarte ahí.</p>
+        </div>
+      </div>
+
+      <!-- Tarjetas -->
+      <div class="services-grid">
+
+        <!-- Tarjeta 1 – Oposiciones -->
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-card-bg" style="background-image:url('https://images.pexels.com/photos/3905827/pexels-photo-3905827.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+          <div class="service-card-glow"></div>
+          <div class="service-badge">01</div>
+          <div class="service-icon" style="background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(249,115,22,0.2));">
+            <i data-lucide="award" style="width:44px;height:44px;color:var(--primary);"></i>
+          </div>
+          <h3 class="service-title">OPOSICIONES</h3>
+          <p class="service-subtitle">Preparación física específica</p>
+          <p class="service-desc">Planes diseñados para superar las pruebas de policía, bomberos, guardia civil y fuerzas armadas.</p>
+          <div class="service-features">
+            <div class="feature-tag"><div class="feature-dot"></div>Test de Cooper</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Circuitos agilidad</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Fuerza específica</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Resistencia CV</div>
+          </div>
+          <div class="service-arrow">
+            <i data-lucide="arrow-right" style="width:22px;height:22px;color:#000;"></i>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 – Running -->
+        <div class="service-card reveal" data-delay="150">
+          <div class="service-card-bg" style="background-image:url('https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+          <div class="service-card-glow"></div>
+          <div class="service-badge">02</div>
+          <div class="service-icon" style="background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(6,182,212,0.2));">
+            <i data-lucide="trophy" style="width:44px;height:44px;color:var(--primary);"></i>
+          </div>
+          <h3 class="service-title">10K · 21K · 42K</h3>
+          <p class="service-subtitle">Velocidad y resistencia</p>
+          <p class="service-desc">Entrenamiento estructurado desde 5K hasta maratón con metodología científica.</p>
+          <div class="service-features">
+            <div class="feature-tag"><div class="feature-dot"></div>Series velocidad</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Tempo runs</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Técnica carrera</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Periodización</div>
+          </div>
+          <div class="service-arrow">
+            <i data-lucide="arrow-right" style="width:22px;height:22px;color:#000;"></i>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 – Trail -->
+        <div class="service-card reveal" data-delay="300">
+          <div class="service-card-bg" style="background-image:url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+          <div class="service-card-glow"></div>
+          <div class="service-badge">03</div>
+          <div class="service-icon" style="background:linear-gradient(135deg,rgba(34,197,94,0.2),rgba(16,185,129,0.2));">
+            <i data-lucide="mountain" style="width:44px;height:44px;color:var(--primary);"></i>
+          </div>
+          <h3 class="service-title">TRAIL & ULTRA</h3>
+          <p class="service-subtitle">Montaña y ultra distancia</p>
+          <p class="service-desc">Entrenamiento específico para trail running y carreras de ultra con desnivel.</p>
+          <div class="service-features">
+            <div class="feature-tag"><div class="feature-dot"></div>Vertical training</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Técnica descenso</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Gestión esfuerzo</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Terreno técnico</div>
+          </div>
+          <div class="service-arrow">
+            <i data-lucide="arrow-right" style="width:22px;height:22px;color:#000;"></i>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 – Fuerza -->
+        <div class="service-card reveal" data-delay="450">
+          <div class="service-card-bg" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=60')"></div>
+          <div class="service-card-glow"></div>
+          <div class="service-badge">04</div>
+          <div class="service-icon" style="background:linear-gradient(135deg,rgba(168,85,247,0.2),rgba(236,72,153,0.2));">
+            <i data-lucide="dumbbell" style="width:44px;height:44px;color:var(--primary);"></i>
+          </div>
+          <h3 class="service-title">FUERZA</h3>
+          <p class="service-subtitle">Funcional aplicada</p>
+          <p class="service-desc">Desarrollo de fuerza específica para runners: prevención y rendimiento.</p>
+          <div class="service-features">
+            <div class="feature-tag"><div class="feature-dot"></div>Core stability</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Fuerza explosiva</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Movilidad</div>
+            <div class="feature-tag"><div class="feature-dot"></div>Prevención</div>
+          </div>
+          <div class="service-arrow">
+            <i data-lucide="arrow-right" style="width:22px;height:22px;color:#000;"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section-wave wave-to-dark"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       METODOLOGÍA
+  ═══════════════════════════════════════════ -->
+  <section id="metodo">
+    <div class="method-split"></div>
+    <div class="floating-elements" style="opacity:0.05;">
+      <div class="float-el"></div>
+      <div class="float-el"></div>
+      <div class="float-el"></div>
+      <div class="float-el"></div>
+    </div>
+
+    <div class="section-inner">
+      <div class="reveal" style="margin-bottom:80px;">
+        <div class="section-tag">
+          <div class="section-tag-line"></div>
+          <span class="section-tag-text">MI METODOLOGÍA</span>
+        </div>
+        <h2 class="section-title">
+          DE LA<br>
+          <span class="text-gradient">EVALUACIÓN</span><br>
+          AL ÉXITO
+        </h2>
+      </div>
+
+      <div class="method-steps">
+
+        <!-- Paso 1 -->
+        <div class="method-step reveal-left">
+          <div class="method-num">01</div>
+          <div class="method-card">
+            <div class="method-card-glow"></div>
+            <div class="method-icon">
+              <i data-lucide="activity" style="width:40px;height:40px;color:var(--primary);"></i>
+            </div>
+            <h3 class="method-title">EVALUACIÓN</h3>
+            <p class="method-desc">Análisis completo de tu nivel físico, objetivos y disponibilidad horaria para diseñar tu plan.</p>
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="method-step reveal-right">
+          <div class="method-num">02</div>
+          <div class="method-card">
+            <div class="method-card-glow"></div>
+            <div class="method-icon">
+              <i data-lucide="target" style="width:40px;height:40px;color:var(--primary);"></i>
+            </div>
+            <h3 class="method-title">PLANIFICACIÓN</h3>
+            <p class="method-desc">Diseño de tu programa de entrenamiento específico adaptado a tu meta y características.</p>
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="method-step reveal-left">
+          <div class="method-num">03</div>
+          <div class="method-card">
+            <div class="method-card-glow"></div>
+            <div class="method-icon">
+              <i data-lucide="trending-up" style="width:40px;height:40px;color:var(--primary);"></i>
+            </div>
+            <h3 class="method-title">SEGUIMIENTO</h3>
+            <p class="method-desc">Monitorización online constante de tu progreso con ajustes en tiempo real según tu evolución.</p>
+          </div>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="method-step reveal-right">
+          <div class="method-num">04</div>
+          <div class="method-card">
+            <div class="method-card-glow"></div>
+            <div class="method-icon">
+              <i data-lucide="trophy" style="width:40px;height:40px;color:var(--primary);"></i>
+            </div>
+            <h3 class="method-title">TU META</h3>
+            <p class="method-desc">Alcanza tu objetivo con soporte completo: desde la primera evaluación hasta el día D.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section-wave wave-to-black"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIOS
+  ═══════════════════════════════════════════ -->
+  <section id="casos">
+    <canvas id="particles2" style="position:absolute;inset:0;pointer-events:none;opacity:0.4;z-index:0;"></canvas>
+
+    <div class="section-inner">
+      <div class="testimonials-header reveal">
+        <div class="section-tag section-tag-center">
+          <div class="section-tag-line"></div>
+          <span class="section-tag-text">CASOS REALES</span>
+          <div class="section-tag-line"></div>
+        </div>
+        <h2 class="section-title" style="text-align:center;">
+          <span class="text-gradient">250+ ATLETAS</span><br>
+          HAN CUMPLIDO
+        </h2>
+      </div>
+
+      <div class="testimonials-cards">
+
+        <!-- Testimonio 1 -->
+        <div class="test-card reveal" data-delay="0">
+          <div class="test-corner" style="background:linear-gradient(135deg,#e63946,#9b1d2a);"></div>
+          <div class="test-stars">
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+          </div>
+          <p class="test-quote">"Aprobé en el primer intento. El plan específico fue determinante para superar las pruebas."</p>
+          <div class="test-footer">
+            <div>
+              <div class="test-name">Laura M.</div>
+              <div class="test-achievement" style="background:linear-gradient(to right,#e63946,#9b1d2a);-webkit-background-clip:text;background-clip:text;color:transparent;">POLICÍA NACIONAL</div>
+            </div>
+            <div class="test-trophy" style="background:linear-gradient(135deg,#e63946,#9b1d2a);">
+              <i data-lucide="trophy" style="width:26px;height:26px;color:#000;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="test-card reveal" data-delay="200">
+          <div class="test-corner" style="background:linear-gradient(135deg,#ff4757,#ffd60a);"></div>
+          <div class="test-stars">
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+          </div>
+          <p class="test-quote">"De 3:25 a romper 3h en un año. Metodología científica y seguimiento impecable."</p>
+          <div class="test-footer">
+            <div>
+              <div class="test-name">Javier S.</div>
+              <div class="test-achievement" style="background:linear-gradient(to right,#ff4757,#ffd60a);-webkit-background-clip:text;background-clip:text;color:transparent;">MARATÓN 2:57</div>
+            </div>
+            <div class="test-trophy" style="background:linear-gradient(135deg,#ff4757,#ffd60a);">
+              <i data-lucide="trophy" style="width:26px;height:26px;color:#000;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="test-card reveal" data-delay="400">
+          <div class="test-corner" style="background:linear-gradient(135deg,#ffd60a,#22c55e);"></div>
+          <div class="test-stars">
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+            <i data-lucide="star" style="width:22px;height:22px;"></i>
+          </div>
+          <p class="test-quote">"Mi primera ultra completada. Planificación perfecta para montaña y distancia."</p>
+          <div class="test-footer">
+            <div>
+              <div class="test-name">Ana T.</div>
+              <div class="test-achievement" style="background:linear-gradient(to right,#ffd60a,#22c55e);-webkit-background-clip:text;background-clip:text;color:transparent;">ULTRA TRAIL 100K</div>
+            </div>
+            <div class="test-trophy" style="background:linear-gradient(135deg,#ffd60a,#22c55e);">
+              <i data-lucide="trophy" style="width:26px;height:26px;color:#000;"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section-wave wave-to-dark"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PERFIL Y RESULTADOS
+  ═══════════════════════════════════════════ -->
+  <section id="resultados">
+    <div class="section-inner">
+
+      <div class="section-tag reveal">
+        <div class="section-tag-line"></div>
+        <span class="section-tag-text">TRANSFORMACIONES REALES</span>
+      </div>
+      <h2 class="section-title reveal" style="margin-bottom:80px;">
+        NÚMEROS QUE<br>
+        <span class="text-gradient">NO MIENTEN</span>
+      </h2>
+
+      <!-- Perfil del entrenador -->
+      <div class="trainer-profile reveal">
+        <!-- Para añadir tu foto: reemplaza el div.trainer-photo-placeholder por <img src="tu-foto.jpg" alt="Tu nombre"> -->
+        <div class="trainer-photo">
+          <div class="trainer-photo-placeholder">
+            <i data-lucide="user" style="width:72px;height:72px;opacity:0.4;color:var(--primary);"></i>
+            <span>TU FOTO AQUÍ</span>
+          </div>
+          <div class="trainer-photo-badge">
+            <span class="trainer-badge-num" data-counter="15" data-suffix="+">15+</span>
+            <span class="trainer-badge-label">AÑOS</span>
+          </div>
+        </div>
+
+        <div class="trainer-bio">
+          <div class="section-tag" style="margin-bottom:24px;">
+            <div class="section-tag-line"></div>
+            <span class="section-tag-text">EL ENTRENADOR</span>
+          </div>
+          <h3 class="trainer-name">JAIME<br><span class="text-gradient">GÓMEZ</span></h3>
+          <p class="trainer-desc">Especialista en preparación física para oposiciones, running y trail. Más de 15 años en el mundo del atletismo con una metodología probada y un seguimiento completamente personalizado.</p>
+          <div class="trainer-certs">
+            <div class="cert-tag">
+              <i data-lucide="check-circle" style="width:16px;height:16px;color:var(--primary);"></i>
+              Monitor de Atletismo
+            </div>
+            <div class="cert-tag">
+              <i data-lucide="check-circle" style="width:16px;height:16px;color:var(--primary);"></i>
+              Coach deportivo
+            </div>
+            <div class="cert-tag">
+              <i data-lucide="check-circle" style="width:16px;height:16px;color:var(--primary);"></i>
+              Monitor de fitness
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Métricas antes / después -->
+      <div class="results-grid reveal">
+
+        <div class="result-card">
+          <div class="result-label">MARATÓN</div>
+          <div class="result-values">
+            <div class="result-side">
+              <div class="result-time before">4:12</div>
+              <div class="result-sublabel">ANTES</div>
+            </div>
+            <div class="result-arrow-wrap">
+              <i data-lucide="arrow-right" style="width:28px;height:28px;color:var(--primary);"></i>
+              <div class="result-improvement">−75 min</div>
+            </div>
+            <div class="result-side">
+              <div class="result-time after">2:57</div>
+              <div class="result-sublabel">DESPUÉS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-label">10K</div>
+          <div class="result-values">
+            <div class="result-side">
+              <div class="result-time before">52:00</div>
+              <div class="result-sublabel">ANTES</div>
+            </div>
+            <div class="result-arrow-wrap">
+              <i data-lucide="arrow-right" style="width:28px;height:28px;color:var(--primary);"></i>
+              <div class="result-improvement">−12 min</div>
+            </div>
+            <div class="result-side">
+              <div class="result-time after">40:00</div>
+              <div class="result-sublabel">DESPUÉS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-label">TEST COOPER</div>
+          <div class="result-values">
+            <div class="result-side">
+              <div class="result-time before">2.400m</div>
+              <div class="result-sublabel">ANTES</div>
+            </div>
+            <div class="result-arrow-wrap">
+              <i data-lucide="arrow-right" style="width:28px;height:28px;color:var(--primary);"></i>
+              <div class="result-improvement">+600m</div>
+            </div>
+            <div class="result-side">
+              <div class="result-time after">3.000m</div>
+              <div class="result-sublabel">DESPUÉS</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LLAMADA A LA ACCIÓN FINAL
+  ═══════════════════════════════════════════ -->
+  <section id="cta">
+    <div class="mesh-gradient">
+      <div class="mesh-blob mesh-blob-1"></div>
+      <div class="mesh-blob mesh-blob-2"></div>
+    </div>
+    <div class="animated-grid" id="grid-cta"></div>
+
+    <!-- Texto en movimiento de fondo -->
+    <div class="cta-scroll-text">
+      <div class="cta-moving-text">
+        COMIENZA · TRANSFORMA · SUPERA · COMIENZA · TRANSFORMA · SUPERA · COMIENZA · TRANSFORMA · SUPERA ·&nbsp;
+        COMIENZA · TRANSFORMA · SUPERA · COMIENZA · TRANSFORMA · SUPERA · COMIENZA · TRANSFORMA · SUPERA ·&nbsp;
+      </div>
+    </div>
+
+    <div class="cta-content reveal">
+      <div class="section-tag section-tag-center" style="margin-bottom:48px;">
+        <div class="section-tag-line"></div>
+        <span class="section-tag-text">DA EL PRIMER PASO</span>
+        <div class="section-tag-line"></div>
+      </div>
+
+      <h2 class="cta-title">
+        ¿LISTO?<br>
+        <span class="text-gradient">VAMOS</span>
+      </h2>
+
+      <p class="cta-desc">
+        Primera evaluación <strong>100% GRATIS</strong>
+        <small>Sin compromiso · Sin permanencia · Resultados garantizados</small>
+      </p>
+
+      <button class="btn-cta magnetic-btn">
+        AGENDA EVALUACIÓN GRATIS
+        <i data-lucide="arrow-right" style="width:28px;height:28px;"></i>
+      </button>
+
+      <div class="cta-notes">
+        <div class="cta-note"><div class="note-dot"></div>Respuesta en 24h-48h</div>
+        <div class="cta-note"><div class="note-dot"></div>Planes desde 49€/mes</div>
+        <div class="cta-note"><div class="note-dot"></div>Garantía de resultados</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <i data-lucide="flame" style="width:28px;height:28px;color:#000;"></i>
+        </div>
+        <div>
+          <div class="footer-name">JAIME GOMEZ</div>
+          <div class="footer-sub">PERFORMANCE TRAINING</div>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 JAIME GOMEZ · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
