@@ -49,7 +49,7 @@
     }
     .contact-title {
       font-family: var(--font-display);
-      font-size: clamp(2.8rem, 7vw, 6rem);
+      font-size: clamp(2.6rem, 6vw, 5.25rem);
       font-weight: 900;
       letter-spacing: -0.03em;
       line-height: 1;
@@ -376,20 +376,13 @@
         </div>
         <div class="nav-logo-text">
           <div class="nav-logo-name">LA LIEBRE</div>
-          <div class="nav-logo-sub">ENTRENAMIENTO INTEGRAL</div>
+          <div class="nav-logo-sub">PLANES DE RUNNING</div>
         </div>
       </a>
 
       <div class="nav-links">
-        <a href="index.html#servicios" class="nav-link">SERVICIOS</a>
-        <a href="index.html#metodo"    class="nav-link">MÉTODO</a>
-        <a href="index.html#casos"     class="nav-link">CASOS</a>
+        <a href="index.html"><button class="btn-primary">VOLVER AL INICIO</button></a>
       </div>
-
-      <a href="index.html">
-        <button class="btn-primary">VOLVER AL INICIO</button>
-      </a>
-    </div>
   </nav>
 
   <!-- Contenido principal -->
@@ -403,11 +396,11 @@
         <div class="section-tag-line"></div>
       </div>
       <h1 class="contact-title">
-        RESERVA TU<br>
-        <span class="text-gradient">PRIMERA SESIÓN</span>
+        ENCUENTRA TU<br>
+        <span class="text-gradient">PLAN DE RUNNING</span>
       </h1>
       <p class="contact-subtitle">
-        Cuéntame tu objetivo y te preparo un plan completamente personalizado. Sin compromisos, sin plantillas genéricas.
+        Elige el plan completo con Trainerplan o el seguimiento personalizado semanal. Cuéntanos tu distancia, tu nivel y tu próxima meta.
       </p>
     </div>
 
@@ -427,15 +420,7 @@
           </div>
         </div>
 
-        <div class="contact-info-item">
-          <div class="contact-info-icon">
-            <i data-lucide="phone" style="width:22px;height:22px;color:var(--primary);"></i>
-          </div>
-          <div class="contact-info-text">
-            <h4>TELÉFONO / WHATSAPP</h4>
-            <p>+34 600 000 000</p>
-          </div>
-        </div>
+
 
         <div class="contact-info-item">
           <div class="contact-info-icon">
@@ -447,22 +432,6 @@
           </div>
         </div>
 
-        <div class="contact-divider"></div>
-
-        <div>
-          <p style="font-family:var(--font-accent);font-size:11px;letter-spacing:0.25em;color:rgba(245,245,245,0.4);font-weight:700;margin-bottom:14px;">SÍGUEME</p>
-          <div class="contact-social">
-            <a href="#" class="social-btn" aria-label="Instagram">
-              <i data-lucide="instagram" style="width:20px;height:20px;color:var(--foreground);"></i>
-            </a>
-            <a href="#" class="social-btn" aria-label="Strava">
-              <i data-lucide="activity" style="width:20px;height:20px;color:var(--foreground);"></i>
-            </a>
-            <a href="#" class="social-btn" aria-label="YouTube">
-              <i data-lucide="youtube" style="width:20px;height:20px;color:var(--foreground);"></i>
-            </a>
-          </div>
-        </div>
 
       </div>
 
@@ -471,11 +440,17 @@
         <div class="contact-badge">RESPUESTA EN 24H</div>
 
         <!-- Formulario visible -->
-        <form id="contact-form" action="https://formspree.io/f/TU_FORM_ID" method="POST" novalidate>
+        <form id="request-form" action="mailto:jaime@performancetraining.es" data-email-subject="Solicitud de alta · La Liebre">
+          <template id="email-body">Nombre: {{nombre}}
+Modalidad: {{plan}}
+Distancia: {{distancia}}
+
+{{mensaje}}</template>
+          <template id="email-status">Solicitud preparada. Envíala desde tu aplicación de correo. Si no se abre, escribe al email indicado debajo; la solicitud aún no se ha enviado.</template>
 
           <input type="hidden" name="_subject" value="Nuevo contacto desde La Liebre" />
 
-          <div class="form-row">
+          <div class="form-group"><label class="form-label" for="plan">MODALIDAD</label><select class="form-select" id="plan" name="plan"><option value="app">Plan completo + Trainerplan · 29,99 €/mes</option><option value="personalizado">Planificación semanal personalizada · 69,99 €/mes</option></select></div><div class="form-row">
             <div class="form-group">
               <label class="form-label" for="nombre">NOMBRE</label>
               <input class="form-input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
@@ -498,13 +473,9 @@
 
           <div class="form-group">
             <label class="form-label" for="objetivo">¿QUÉ QUIERES TRABAJAR?</label>
-            <select class="form-select" id="objetivo" name="objetivo" required>
+            <select class="form-select" id="objetivo" name="distancia" required>
               <option value="" disabled selected>Selecciona tu objetivo</option>
-              <option value="running">Running (5K – Maratón)</option>
-              <option value="trail">Trail &amp; Ultra</option>
-              <option value="fuerza">Fuerza funcional</option>
-              <option value="oposiciones">Preparación oposiciones</option>
-              <option value="otro">Otro</option>
+              <option>5K</option><option>10K</option><option>21K · Media maratón</option><option>42K · Maratón</option><option>Trail · Km vertical</option><option>Trail · Maratón</option><option>Trail · Ultramaratón</option>
             </select>
           </div>
 
@@ -516,18 +487,16 @@
           <div class="form-check">
             <input type="checkbox" id="privacidad" name="privacidad" required />
             <label class="form-check-label" for="privacidad">
-              He leído y acepto la <a href="#" style="color:var(--primary);text-decoration:underline;">política de privacidad</a>. Mis datos no serán compartidos con terceros.
+              Entiendo que se abrirá mi aplicación de correo y tendré que enviar la solicitud desde allí.
             </label>
           </div>
 
           <button type="submit" class="form-submit">
             <i data-lucide="send" style="width:18px;height:18px;"></i>
-            ENVIAR MENSAJE
+            PREPARAR SOLICITUD POR EMAIL
           </button>
 
-          <div class="form-status info visible" id="form-status">
-            El formulario ya está preparado para Formspree. Solo faltará sustituir <strong>TU_FORM_ID</strong> por tu identificador cuando conectes el email.
-          </div>
+          <div class="form-status info visible" id="status" role="status">Se abrirá tu correo para enviar la solicitud. El pago online y el acceso privado están pendientes de activar. Esta web no realiza cobros.</div>
 
         </form>
 
@@ -566,63 +535,9 @@
     reveals.forEach(el => io.observe(el));
 
     // Lucide icons
-    lucide.createIcons();
+    if (window.lucide) lucide.createIcons();
 
-    // Form submit (preparado para Formspree)
-    const contactForm = document.getElementById('contact-form');
-    const formSuccess = document.getElementById('form-success');
-    const formStatus = document.getElementById('form-status');
-    const formSubmitBtn = contactForm.querySelector('.form-submit');
-    const formSubmitDefault = formSubmitBtn.innerHTML;
-
-    const setFormStatus = (message, type = 'info') => {
-      formStatus.className = `form-status ${type} visible`;
-      formStatus.innerHTML = message;
-    };
-
-    contactForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-
-      if (!this.checkValidity()) {
-        this.reportValidity();
-        return;
-      }
-
-      const endpoint = this.getAttribute('action') || '';
-      if (!endpoint || endpoint.includes('TU_FORM_ID')) {
-        setFormStatus('Formulario listo para Formspree. Cuando tengas tu cuenta, sustituye <strong>TU_FORM_ID</strong> por el identificador real del formulario.', 'info');
-        return;
-      }
-
-      try {
-        formSubmitBtn.disabled = true;
-        formSubmitBtn.classList.add('is-loading');
-        formSubmitBtn.innerHTML = 'ENVIANDO...';
-        setFormStatus('Enviando tu mensaje...', 'info');
-
-        const response = await fetch(endpoint, {
-          method: 'POST',
-          body: new FormData(this),
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (!response.ok) {
-          throw new Error('No se pudo enviar el formulario.');
-        }
-
-        this.reset();
-        this.style.display = 'none';
-        formSuccess.classList.add('visible');
-      } catch (error) {
-        setFormStatus('No se ha podido enviar el mensaje ahora mismo. Inténtalo de nuevo en unos minutos.', 'error');
-      } finally {
-        formSubmitBtn.disabled = false;
-        formSubmitBtn.classList.remove('is-loading');
-        formSubmitBtn.innerHTML = formSubmitDefault;
-      }
-    });
   </script>
+<script src="contact.js" defer></script>
 </body>
 </html>

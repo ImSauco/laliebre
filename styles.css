@@ -347,11 +347,15 @@ h1.hero-title {
 }
 .hero-word {
   font-family:var(--font-display);
-  font-size:clamp(4rem,16vw,13rem);
+  font-size:clamp(3.6rem,14.4vw,11.7rem);
   letter-spacing:-0.06em; font-weight:900;
   color:var(--foreground); display:block;
 }
-.hero-word-accent { position:relative; display:inline-block }
+.hero-word-accent {
+  position:relative; display:inline-block;
+  background:linear-gradient(to bottom, var(--primary) 0%, #8caa36 22%, var(--accent) 48%, var(--accent) 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
 .hero-word-underline {
   position:absolute; bottom:16px; left:0; right:0;
   height:40px;
@@ -364,9 +368,9 @@ h1.hero-title {
 @keyframes expandX { from{transform:scaleX(0) rotate(-1deg)} to{transform:scaleX(1) rotate(-1deg)} }
 .hero-word-gradient {
   font-family:var(--font-display);
-  font-size:clamp(4rem,16vw,13rem);
+  font-size:clamp(3.6rem,14.4vw,11.7rem);
   letter-spacing:-0.06em; font-weight:900; display:block;
-  background:linear-gradient(to right, var(--primary), #3a7a5c, #ffd60a);
+  background:linear-gradient(to bottom, var(--accent) 0%, var(--accent) 52%, #8caa36 78%, var(--primary) 100%);
   -webkit-background-clip:text; background-clip:text; color:transparent;
   animation: fadeInUp .8s ease 1.2s both;
 }
@@ -494,7 +498,7 @@ section { position:relative; overflow:hidden }
 }
 .section-title {
   font-family:var(--font-display);
-  font-size:clamp(3.5rem,14vw,11rem);
+  font-size:clamp(3.15rem,12.6vw,9.9rem);
   letter-spacing:-0.05em; font-weight:900;
   line-height:.75; color:var(--foreground);
 }
@@ -692,6 +696,18 @@ section { position:relative; overflow:hidden }
 }
 .method-desc { font-size:clamp(16px,2vw,21px); color:#9ca3af; line-height:1.7 }
 
+@media(min-width:1024px){
+  #metodo .method-overview {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
+    column-gap:clamp(32px,4vw,72px);
+    align-items:start;
+  }
+  #metodo .section-tag { grid-column:1; grid-row:1 }
+  #metodo .section-title { grid-column:1; grid-row:2; font-size:clamp(3.5rem,6.5vw,7rem) }
+  #metodo .section-intro { grid-column:2; grid-row:1 / span 3; margin-top:0; max-width:none; font-size:16px; line-height:1.8 }
+}
+
 /* ============================================================
    SECCIÓN TESTIMONIOS
 ============================================================ */
@@ -764,7 +780,7 @@ section { position:relative; overflow:hidden }
 .cta-content { position:relative; z-index:10; text-align:center; padding:24px; max-width:900px; margin:0 auto }
 .cta-title {
   font-family:var(--font-display);
-  font-size:clamp(4rem,18vw,12rem);
+  font-size:clamp(3.6rem,16.2vw,10.8rem);
   letter-spacing:-0.06em; font-weight:900;
   line-height:.7; color:var(--foreground); margin-bottom:56px;
 }
