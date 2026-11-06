@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto – Entrenamientos La Liebre</title>
+  <meta name="description" content="Contacta con La Liebre para solicitar un plan con Trainerplan o una planificación semanal personalizada para tu próxima carrera.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -354,6 +355,11 @@
       box-shadow: 0 8px 24px rgba(45,106,79,0.4);
     }
   </style>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Contacto – Entrenamientos La Liebre">
+  <meta property="og:description" content="Contacta con La Liebre para solicitar un plan con Trainerplan o una planificación semanal personalizada para tu próxima carrera.">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
 
@@ -372,7 +378,7 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <div class="nav-logo-icon">
-          <img src="media/laliebrelogo.png" alt="La Liebre logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+          <img src="media/logo.webp" alt="La Liebre logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
         </div>
         <div class="nav-logo-text">
           <div class="nav-logo-name">LA LIEBRE</div>
@@ -381,7 +387,7 @@
       </a>
 
       <div class="nav-links">
-        <a href="index.html"><button class="btn-primary">VOLVER AL INICIO</button></a>
+        <a href="index.html" class="btn-primary">VOLVER AL INICIO</a>
       </div>
   </nav>
 
@@ -400,7 +406,7 @@
         <span class="text-gradient">PLAN DE RUNNING</span>
       </h1>
       <p class="contact-subtitle">
-        Elige el plan completo con Trainerplan o el seguimiento personalizado semanal. Cuéntanos tu distancia, tu nivel y tu próxima meta.
+        Elige el plan por suscripción, el plan personalizado o un pack de tres meses para tu maratón de 2027. Cuéntanos tu distancia, tu nivel y tu próxima meta.
       </p>
     </div>
 
@@ -416,21 +422,12 @@
           </div>
           <div class="contact-info-text">
             <h4>EMAIL</h4>
-            <p>jaime@performancetraining.es</p>
+            <p><a href="mailto:info@entrenamientoslaliebre.com">info@entrenamientoslaliebre.com</a></p>
           </div>
         </div>
 
 
 
-        <div class="contact-info-item">
-          <div class="contact-info-icon">
-            <i data-lucide="map-pin" style="width:22px;height:22px;color:var(--primary);"></i>
-          </div>
-          <div class="contact-info-text">
-            <h4>UBICACIÓN</h4>
-            <p>Online · Presencial (España)</p>
-          </div>
-        </div>
 
 
       </div>
@@ -440,9 +437,12 @@
         <div class="contact-badge">RESPUESTA EN 24H</div>
 
         <!-- Formulario visible -->
-        <form id="request-form" action="mailto:jaime@performancetraining.es" data-email-subject="Solicitud de alta · La Liebre">
+        <form id="request-form" action="mailto:info@entrenamientoslaliebre.com" data-email-subject="Solicitud de alta · La Liebre">
           <template id="email-body">Nombre: {{nombre}}
 Modalidad: {{plan}}
+Apellido: {{apellido}}
+Email de contacto: {{email}}
+Teléfono: {{telefono}}
 Distancia: {{distancia}}
 
 {{mensaje}}</template>
@@ -450,32 +450,52 @@ Distancia: {{distancia}}
 
           <input type="hidden" name="_subject" value="Nuevo contacto desde La Liebre" />
 
-          <div class="form-group"><label class="form-label" for="plan">MODALIDAD</label><select class="form-select" id="plan" name="plan"><option value="app">Plan completo + Trainerplan · 29,99 €/mes</option><option value="personalizado">Planificación semanal personalizada · 69,99 €/mes</option></select></div><div class="form-row">
+          <div class="form-group"><label class="form-label" for="plan">MODALIDAD</label><select class="form-select" id="plan" name="plan"><option value="app">Plan por suscripción · 29,99 €/mes</option><option value="personalizado">Plan personalizado · 69,99 €/mes</option>
+              <optgroup label="Packs Maratón 2027 · España">
+                <option value="pack-madrid">Pack Maratón de Madrid 2027 · 179,97 € (pago único)</option>
+                <option value="pack-barcelona">Pack Maratón de Barcelona 2027 · 179,97 € (pago único)</option>
+                <option value="pack-malaga">Pack Maratón de Málaga 2027 · 179,97 € (pago único)</option>
+                <option value="pack-sevilla">Pack Maratón de Sevilla 2027 · 179,97 € (pago único)</option>
+                <option value="pack-valencia">Pack Maratón de Valencia 2027 · 179,97 € (pago único)</option>
+                <option value="pack-alicante">Pack Maratón de Alicante 2027 · 179,97 € (pago único)</option>
+              </optgroup>
+              <optgroup label="Packs Maratón 2027 · Majors">
+                <option value="pack-tokio">Pack Maratón de Tokio 2027 · 179,97 € (pago único)</option>
+                <option value="pack-boston">Pack Maratón de Boston 2027 · 179,97 € (pago único)</option>
+                <option value="pack-londres">Pack Maratón de Londres 2027 · 179,97 € (pago único)</option>
+                <option value="pack-ciudad-del-cabo">Pack Maratón de Ciudad del Cabo 2027 · 179,97 € (pago único)</option>
+                <option value="pack-sidney">Pack Maratón de Sídney 2027 · 179,97 € (pago único)</option>
+                <option value="pack-berlin">Pack Maratón de Berlín 2027 · 179,97 € (pago único)</option>
+                <option value="pack-chicago">Pack Maratón de Chicago 2027 · 179,97 € (pago único)</option>
+                <option value="pack-nueva-york">Pack Maratón de Nueva York 2027 · 179,97 € (pago único)</option>
+              </optgroup></select>
+            <p class="contact-pack-info">Packs Maratón 2027: <strong>179,97 € en pago único</strong> por tres meses de preparación (equivalente a 59,99 €/mes). Selecciona una carrera para consultar su plazo. El alta y el pago se gestionan por email.</p>
+          </div><div class="form-row">
             <div class="form-group">
               <label class="form-label" for="nombre">NOMBRE</label>
-              <input class="form-input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+              <input class="form-input" type="text" autocomplete="given-name" id="nombre" name="nombre" placeholder="Tu nombre" required />
             </div>
             <div class="form-group">
               <label class="form-label" for="apellido">APELLIDO</label>
-              <input class="form-input" type="text" id="apellido" name="apellido" placeholder="Tu apellido" />
+              <input class="form-input" type="text" autocomplete="family-name" id="apellido" name="apellido" placeholder="Tu apellido" />
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="email">EMAIL</label>
-            <input class="form-input" type="email" id="email" name="email" placeholder="tu@email.com" required />
+            <input class="form-input" type="email" autocomplete="email" id="email" name="email" placeholder="tu@email.com" required />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="telefono">TELÉFONO (OPCIONAL)</label>
-            <input class="form-input" type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+            <input class="form-input" type="tel" autocomplete="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="objetivo">¿QUÉ QUIERES TRABAJAR?</label>
             <select class="form-select" id="objetivo" name="distancia" required>
               <option value="" disabled selected>Selecciona tu objetivo</option>
-              <option>5K</option><option>10K</option><option>21K · Media maratón</option><option>42K · Maratón</option><option>Trail · Km vertical</option><option>Trail · Maratón</option><option>Trail · Ultramaratón</option>
+              <option>5K</option><option>10K</option><option>Medio maratón</option><option>Maratón</option><option>Trail · Km vertical</option><option>Trail · Maratón</option><option>Trail · Ultramaratón</option>
             </select>
           </div>
 
@@ -496,7 +516,7 @@ Distancia: {{distancia}}
             PREPARAR SOLICITUD POR EMAIL
           </button>
 
-          <div class="form-status info visible" id="status" role="status">Se abrirá tu correo para enviar la solicitud. El pago online y el acceso privado están pendientes de activar. Esta web no realiza cobros.</div>
+          <div class="form-status info visible" id="status" role="status">El formulario prepara una solicitud en tu aplicación de correo. Envíala para que podamos confirmar tus datos y gestionar el alta por email.</div>
 
         </form>
 
@@ -538,6 +558,7 @@ Distancia: {{distancia}}
     if (window.lucide) lucide.createIcons();
 
   </script>
+<script src="packs-2027.js" defer></script>
 <script src="contact.js" defer></script>
 </body>
 </html>

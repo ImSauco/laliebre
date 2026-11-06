@@ -1,4 +1,40 @@
 /* Additions use the original site's colors, type and card treatment. */
+.exercise-plan-link{text-decoration:underline;text-underline-offset:4px;color:var(--accent)}
+.notes:has(>p:only-child){grid-template-columns:minmax(0,1fr)}
+#gratis .tabs{flex-wrap:wrap}
+#gratis .tabs button{white-space:nowrap}
+.plan-months{min-width:0}
+.plan-month-viewport{overflow:hidden;border-radius:24px}
+.plan-month-track{display:flex;width:100%;transition:transform .55s ease;align-items:stretch}
+.show-next-month .plan-month-track{transform:translateX(-100%)}
+.plan-month-current,.plan-month-locked{min-width:0;flex:0 0 100%;width:100%}
+.plan-month-locked{position:relative;isolation:isolate;overflow:hidden;border:1px solid #555;border-radius:24px;background:#101611}
+.plan-month-preview{height:100%;filter:blur(6px);opacity:.5;pointer-events:none;user-select:none;overflow:hidden}
+.plan-month-preview table{min-width:950px;width:100%;height:100%}
+.plan-month-invitation{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 20px;background:rgba(8,12,9,.58)}
+.plan-month-invitation p{max-width:580px}
+.plan-month-invitation p{font:700 clamp(24px,3vw,36px)/1.35 var(--font-display);margin-bottom:28px;color:#f5f5f5;text-wrap:balance}
+.plan-month-invitation .btn-primary{display:inline-block;padding:14px 28px}
+.plan-month-navigation{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:24px}
+.plan-month-navigation span{font-size:13px;color:#c3c8c5}
+.plan-month-navigation button{padding:12px 24px}
+.plan-month-navigation .plan-print{margin-top:0}
+@media(max-width:700px){.plan-months .has-mobile-view{display:block}.plan-months .plan-days{display:none}.plan-month-locked .plan-month-preview{position:absolute;inset:0}.plan-month-current .table-scroll{height:100%}}
+@media(prefers-reduced-motion:reduce){.plan-month-track{transition:none}}
+body>.print-plan{display:none}.plan-days{display:none}.plan-print{display:inline-block;margin-top:20px}.plan-days details{border:1px solid #555;border-radius:12px;margin:12px 0;padding:16px}.plan-days summary{cursor:pointer;font-weight:700;padding:8px 0}.plan-days p{padding:12px 0;line-height:1.7;font-size:14px;border-top:1px solid #444}.plan-days strong{display:block;color:var(--accent)}
+@media(max-width:700px){.has-mobile-view{display:none}.plan-days{display:block}}
+@page{size:A4 landscape;margin:12mm}
+@media print{
+ body.printing-plan{background:white!important;color:black!important}
+ .printing-plan>*{display:none!important}
+ .printing-plan *{visibility:hidden!important;animation:none!important}
+ .printing-plan .print-plan,.printing-plan .print-plan *{visibility:visible!important;color:black!important;background:white!important}
+ .printing-plan>.print-plan{display:table!important;width:100%;min-width:0;font-size:9pt}
+ .printing-plan .has-mobile-view{display:block;overflow:visible;border:0}
+ .printing-plan th,.printing-plan td{padding:10px 6px;border:1px solid #999}
+ .printing-plan tr{break-inside:avoid}
+ .printing-plan #main-nav,.printing-plan footer,.printing-plan .plan-days,.printing-plan .plan-print{display:none!important}
+}
 .running-addition.trail-section{background:#1c1410;border-top:1px solid #70513b}.trail-section>.section-inner{padding-top:0}.trail-heading{position:relative;isolation:isolate;padding:90px 0 55px;margin-bottom:38px}.trail-heading:before{content:'';position:absolute;z-index:-1;inset:0 -64px;background:linear-gradient(90deg,rgba(28,20,16,.97) 0%,rgba(28,20,16,.82) 38%,rgba(28,20,16,.15) 100%),linear-gradient(0deg,#1c1410,transparent 35%),url('media/trail-landscape.svg') center right/cover no-repeat}.trail-heading .trail-title{max-width:880px;text-wrap:balance;text-shadow:0 2px 24px #1c1410}.trail-heading .trail-intro{max-width:640px;color:#d1c2b4}.trail-heading .section-tag-text{color:#c5a17b}.trail-heading .section-tag-line{background:#c5a17b}.trail-heading .trail-subtitle{color:#ebcc93}.trail-terrain{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.trail-terrain span{padding:9px 14px;border:1px solid #ab825766;background:#352318bb;color:#dfc6a7;border-radius:999px;font:700 11px var(--font-accent);letter-spacing:.08em}.trail-section .tabs button{border-color:#795b43;background:#302118}.trail-section .tabs button[aria-pressed=true]{background:#825837;border-color:#d2ab78;color:#fff}.trail-section .toolbar>span,.trail-section caption{color:#ebcc93}.trail-section .table-scroll{background:transparent;border-color:#6c503b}.trail-section thead{background:rgba(101,69,47,.3);color:#fff3df}.trail-section thead th{border-color:rgba(137,99,71,.35)}.trail-section th,.trail-section td{border-color:#513c2c}.trail-section .inline{border-color:#513c2c}.trail-section .inline a{color:#ebcc93}.trail-section .notes{color:#c4b3a2}@media(max-width:1023px){.trail-heading{padding-top:65px}.trail-heading:before{inset:0 -24px;background-position:center,right center,right center}}@media(max-width:600px){.trail-heading:before{background-image:linear-gradient(90deg,rgba(28,20,16,.88),rgba(28,20,16,.65)),linear-gradient(0deg,#1c1410,transparent 45%),url('media/trail-landscape.svg')}.trail-terrain{gap:8px}.trail-terrain span{font-size:10px;padding:8px 10px}}
 .trail-section{border-top:1px solid rgba(145,101,64,.5);background:linear-gradient(135deg,#302116,#080808)}.trail-title{font-size:clamp(2.7rem,6vw,6.5rem);line-height:1;max-width:1100px}.trail-subtitle{font:700 clamp(1.2rem,2.5vw,2rem) var(--font-accent);color:var(--accent);margin:28px 0 20px}.trail-intro{max-width:850px;color:#b3b8be;line-height:1.7;margin-bottom:28px}.trail-tabs{flex-wrap:wrap}.trail-tabs button{white-space:normal}.trail-section .section-tag-text{letter-spacing:.2em}
 .goal-selector{display:flex;align-items:center;flex-wrap:wrap;gap:24px;margin:24px 0}.goal-selector label{display:grid;gap:10px;font:700 12px var(--font-accent);letter-spacing:.12em;color:var(--accent)}.goal-selector select{min-width:250px;max-width:100%;padding:14px 18px;border:1px solid #555;border-radius:12px;background:#171717;color:var(--foreground);font:400 15px var(--font-body);letter-spacing:normal}.goal-selector p{font-size:14px;line-height:1.6;color:#b3b8be}.goal-selector select:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
@@ -7,7 +43,31 @@
 .trail-section [data-trail-panel]>.trail-intro{color:#d1c2b4}.trail-section .notes strong{color:#f2dfc7}.trail-section :focus-visible{outline-color:#ebcc93}
 
 /* All plan content is in HTML; JavaScript only selects the visible variant. */
+.pricing{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;align-items:stretch}
+.pricing article{min-width:0;height:100%}
+.pricing .plan-actions{margin-top:auto;display:grid;grid-template-rows:auto minmax(3.4em,auto);font-size:11px}
+.pricing .plan-actions .btn-primary{display:flex;align-items:center;justify-content:center;min-height:44px}
+.pricing .plan-actions .availability{display:block;min-height:3.4em}
+@media(max-width:900px){.pricing{grid-template-columns:minmax(0,1fr)}}
 [hidden]{display:none!important}
 .plan-distance-heading{font:700 28px var(--font-display);margin:28px 0 20px}
 .plan-pace{font-size:14px;color:#b3b8be;line-height:1.6;margin-bottom:16px}
 [data-goal-panel]{margin-bottom:28px}
+
+.race-packs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:28px}
+.race-pack-group-title{margin-top:48px;font:700 clamp(22px,3vw,30px) var(--font-display);letter-spacing:.03em}
+.race-pack{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:clamp(24px,4vw,48px);border:1px solid #50634e;border-radius:24px;background:radial-gradient(ellipse at top right,#2d6a4f35,transparent 65%),#111813}
+.race-pack-distance{font:700 12px var(--font-accent);letter-spacing:.14em;color:var(--accent)}
+.race-pack h4{margin:24px 0;font:700 clamp(28px,3vw,40px)/1.1 var(--font-display)}
+.race-pack .race-pack-date,.race-pack .race-pack-closing{font-size:13px;line-height:1.7;margin-bottom:20px}
+.race-pack-source{font-size:12px;text-decoration:underline;text-underline-offset:4px;color:#c4d6c9;margin-bottom:24px}
+.race-pack [aria-disabled="true"]{opacity:.6;cursor:default;background:#454c46;color:#eee}
+.race-pack p{margin-bottom:32px;color:#b3bdb6;font-size:15px;line-height:1.7;max-width:48ch}
+.packs-price{margin-top:28px;font:700 clamp(36px,5vw,52px)/1.2 var(--font-display);color:var(--foreground)}
+.packs-price span{display:inline-block;font:400 15px var(--font-body);color:#b3bdb6}
+.packs-price-detail{margin-top:12px;font-size:15px;line-height:1.7;color:#b3bdb6}
+.race-pack-deadline{margin-top:28px;max-width:90ch;font-size:14px;line-height:1.8;color:#b3bdb6}
+.race-pack-deadline strong{color:var(--foreground)}
+.race-pack .btn-primary{margin-top:auto;min-height:44px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px 22px}
+@media(min-width:701px) and (max-width:1100px){.race-packs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.race-packs{grid-template-columns:minmax(0,1fr)}}

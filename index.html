@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Liebre - Planes de running 5K, 10K, 21K y 42K</title>
+  <title>La Liebre - Planes de running 5K, 10K, Medio maratón y Maratón</title>
+  <meta name="description" content="Planes de running de 5K, 10K, media maratón, maratón y trail. Consulta cuatro semanas de ejemplo y descubre los planes con Trainerplan de La Liebre.">
 
   <!-- Fuentes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,8 +18,14 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="plans.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="La Liebre - Planes de running 5K, 10K, Medio maratón y Maratón">
+  <meta property="og:description" content="Planes de running de 5K, 10K, media maratón, maratón y trail. Consulta cuatro semanas de ejemplo y descubre los planes con Trainerplan de La Liebre.">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <!-- ═══════════════════════════════════════════
        CURSOR PERSONALIZADO
@@ -41,29 +48,26 @@
   <nav id="main-nav">
     <div class="nav-inner">
       <!-- Logo -->
-      <div class="nav-logo">
+      <a class="nav-logo" href="index.html" aria-label="La Liebre, inicio">
         <div class="nav-logo-icon">
-          <img src="media/laliebrelogo.png" alt="La Liebre logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+          <img src="media/logo.webp" alt="La Liebre logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
         </div>
         <div class="nav-logo-text">
           <div class="nav-logo-name">LA LIEBRE</div>
           <div class="nav-logo-sub">PLANES DE RUNNING</div>
         </div>
-      </div>
+      </a>
 
-      <!-- Links (solo en pantallas grandes) -->
-      <div class="nav-links">
-        <a href="#metodo"    class="nav-link">MÉTODO</a>
-        <a href="#planes"     class="nav-link">PLANES</a>
-      </div>
-      <a href="blog.html" class="nav-link">BLOG</a>
-      <a href="#gratis"><button class="btn-primary magnetic-btn">MES GRATIS</button></a>
+      <!-- Navegación principal -->
+      <a href="#gratis" class="btn-primary">MES GRATIS</a>
+      <details class="site-menu"><summary aria-label="Menú principal"><span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span></summary><nav aria-label="Secciones"><a href="#metodo">Método</a><a href="#gratis">Planes gratis</a><a href="#trail">Trail</a><a href="#planes">Tarifas</a><a href="core.html">Core</a><a href="blog.html">Blog</a><a href="contacto.html">Contacto</a></nav></details>
     </div>
   </nav>
 
   <!-- ═══════════════════════════════════════════
        HERO
   ═══════════════════════════════════════════ -->
+  <main id="contenido">
   <section id="hero">
     <!-- Partículas (canvas) -->
     <canvas id="particles" style="position:absolute;inset:0;pointer-events:none;opacity:0.6;z-index:1;"></canvas>
@@ -81,7 +85,10 @@
     <!-- Imagen diagonal -->
     <div class="hero-image-wrap" id="hero-image-wrap">
       <img
-        src="media/yocorriendo.JPEG"
+        src="media/corriendo-1280.webp"
+        srcset="media/corriendo-640.webp 640w, media/corriendo-1280.webp 1280w, media/corriendo-1920.webp 1920w"
+        sizes="(max-width: 767px) 100vw, 65vw"
+        fetchpriority="high"
         alt="Jaime Gomez corriendo"
         id="hero-img"
       />
@@ -106,7 +113,7 @@
         <div class="hero-badge">
           <div class="pulse-dot"></div>
           <div class="hero-badge-line"></div>
-          <span class="hero-badge-text">5K · 10K · 21K · 42K</span>
+          <span class="hero-badge-text">5K · 10K · Medio maratón · Maratón</span>
         </div>
 
         <!-- Título -->
@@ -124,8 +131,8 @@
 
         <!-- Descripción -->
         <p class="hero-desc">
-          Planes para corredores de <strong>5K</strong>, <strong>10K</strong>, <strong>21K</strong> y <strong>42K</strong>.
-          <small>Un mes gratis · Plan completo con Trainerplan · Seguimiento personalizado</small>
+          Planes para corredores de <strong>5K</strong>, <strong>10K</strong>, <strong>Medio maratón</strong> y <strong>Maratón</strong>.
+          <small>Cuatro semanas de ejemplo gratis · Planes con Trainerplan desde 29,99 €/mes</small>
         </p>
 
         <!-- Botones -->
@@ -197,7 +204,7 @@
   <!-- ═══════════════════════════════════════════
        METODOLOGÍA
   ═══════════════════════════════════════════ -->
-  <section id="gratis" class="running-addition"><div class="section-inner"><div class="services-header"><div><p class="section-tag-text">ASFALTO / EMPIEZA CON UNA ESTRUCTURA</p><h2 class="section-title running-title">UN MES GRATIS.<br>SIN REGISTRO.</h2></div><p>Cuatro semanas a la vista. Descubre cómo organizar carrera, fuerza y descanso antes de elegir cómo continuar.</p></div><div class="toolbar"><div class="tabs" data-plan-controls hidden role="group" aria-label="Selecciona tu distancia"><button type="button" data-plan="5" aria-pressed="true">5K</button><button type="button" data-plan="10" aria-pressed="false">10K</button><button type="button" data-plan="21" aria-pressed="false">21K</button><button type="button" data-plan="42" aria-pressed="false">42K</button></div><span>ACCESO LIBRE · 0 €</span></div>
+  <section id="gratis" class="running-addition"><div class="section-inner"><div class="services-header"><div><p class="section-tag-text">ASFALTO / EMPIEZA CON UNA ESTRUCTURA</p><h2 class="section-title running-title">UN MES GRATIS.<br>SIN REGISTRO.</h2></div><p>Cuatro semanas a la vista. Este mes gratuito es el primero de un plan de cuatro meses para preparar tu prueba al 100%. Descubre cómo organizar carrera, fuerza y descanso antes de elegir cómo continuar.</p></div><div class="toolbar"><div class="tabs" data-plan-controls hidden role="group" aria-label="Selecciona tu distancia"><button type="button" data-plan="5" aria-pressed="true">5K</button><button type="button" data-plan="10" aria-pressed="false">10K</button><button type="button" data-plan="21" aria-pressed="false">Medio maratón</button><button type="button" data-plan="42" aria-pressed="false">Maratón</button></div><span>ACCESO LIBRE · 0 €</span></div>
 <!-- CONTENIDO EDITABLE: ASFALTO. Cada distancia contiene sus marcas y tablas completas. -->
 <div data-asphalt-distance="5">
   <h3 class="plan-distance-heading">PLANES 5K</h3>
@@ -217,10 +224,10 @@
           <caption>Mes gratuito · 5K · Terminar la distancia</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>20 min: alterna 3 min suave + 2 min caminar</td><td>Ejercicios de core</td><td>20 min: alterna 3 min suave + 2 min caminar</td><td>Descanso</td><td>Descanso / movilidad</td><td>25 min: alterna 3 min suave + 2 min caminar</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>22 min: alterna 3 min suave + 2 min caminar</td><td>Ejercicios de core</td><td>22 min: alterna 3 min suave + 2 min caminar</td><td>Descanso</td><td>Descanso / movilidad</td><td>28 min: alterna 3 min suave + 2 min caminar</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>25 min: alterna 3 min suave + 2 min caminar</td><td>Ejercicios de core</td><td>25 min: alterna 3 min suave + 2 min caminar</td><td>Descanso</td><td>Descanso / movilidad</td><td>30 min: alterna 3 min suave + 2 min caminar</td></tr>
-          <tr><th scope="row">Semana 4 </th><td>Descanso</td><td>20 min: alterna 3 min suave + 2 min caminar</td><td>20 min fuerza suave</td><td>20 min: alterna 3 min suave + 2 min caminar</td><td>Descanso</td><td>Descanso / movilidad</td><td>25 min: alterna 3 min suave + 2 min caminar</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>20 min: 4min corriendo / 1min caminando × 4</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>20 min: 4min corriendo / 1min caminando × 4</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>25 min: 4 min corriendo / 1 min caminando × 5</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>20 min rodaje suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>22 min rodaje suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>25 min rodaje suave</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>25 min rodaje suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>25 min rodaje suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>28 min rodaje suave</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>25 min rodaje suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>25 min rodaje suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>28 min rodaje suave</td></tr>
           </tbody>
         </table>
       </div>
@@ -228,16 +235,16 @@
   <!-- 5K / Sub 30 min -->
   <div data-goal-panel="30">
     <p class="plan-pace">Ritmo medio para la marca: 6:00 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 5K · Sub 30 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>20 min suave (7:00–7:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>25 min suave (7:00–7:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>22 min suave (7:00–7:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>28 min suave (7:00–7:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>25 min suave (7:00–7:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>30 min suave (7:00–7:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>20 min suave (7:00–7:40 min/km)</td><td>20 min fuerza suave</td><td>20 min suave (7:00–7:40 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>25 min suave (7:00–7:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>20 min suave (7:00–7:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 3 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>25 min suave (7:00–7:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>22 min suave (7:00–7:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>28 min suave (7:00–7:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>25 min suave (7:00–7:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>30 min suave (7:00–7:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>25 min suave (7:00–7:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>30 min suave (7:00–7:40 min/km)</td></tr>
           </tbody>
         </table>
       </div>
@@ -245,16 +252,16 @@
   <!-- 5K / Sub 25 min -->
   <div data-goal-panel="25">
     <p class="plan-pace">Ritmo medio para la marca: 5:00 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 5K · Sub 25 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>25 min suave (6:00–6:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>30 min suave (6:00–6:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>27 min suave (6:00–6:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>33 min suave (6:00–6:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>30 min suave (6:00–6:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>35 min suave (6:00–6:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>25 min suave (6:00–6:40 min/km)</td><td>20 min fuerza suave</td><td>25 min suave (6:00–6:40 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>30 min suave (6:00–6:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>25 min suave (6:00–6:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 3 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>30 min suave (6:00–6:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>27 min suave (6:00–6:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>33 min suave (6:00–6:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>30 min suave (6:00–6:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>35 min suave (6:00–6:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>30 min suave (6:00–6:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>35 min suave (6:00–6:40 min/km)</td></tr>
           </tbody>
         </table>
       </div>
@@ -262,16 +269,16 @@
   <!-- 5K / Sub 20 min -->
   <div data-goal-panel="20">
     <p class="plan-pace">Ritmo medio para la marca: 4:00 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Cuatro días de carrera por semana y dos días de fuerza: tren inferior los lunes y tren superior los miércoles. Core los viernes. Alterna Pull en las semanas 1 y 3 con Push en las semanas 2 y 4. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 5K · Sub 20 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>30 min suave (5:00–5:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>35 min suave (5:00–5:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>32 min suave (5:00–5:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>38 min suave (5:00–5:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>35 min suave (5:00–5:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>40 min suave (5:00–5:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>30 min suave (5:00–5:40 min/km)</td><td>20 min fuerza suave</td><td>30 min suave (5:00–5:40 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>35 min suave (5:00–5:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>30 min suave (5:00–5:40 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 3 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>30 min suave (5:00–5:40 min/km)</td><td>35 min suave (5:00–5:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>32 min suave (5:00–5:40 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>32 min suave (5:00–5:40 min/km)</td><td>38 min suave (5:00–5:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>35 min suave (5:00–5:40 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>35 min suave (5:00–5:40 min/km)</td><td>40 min suave (5:00–5:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>35 min suave (5:00–5:40 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>35 min suave (5:00–5:40 min/km)</td><td>40 min suave (5:00–5:40 min/km)</td></tr>
           </tbody>
         </table>
       </div>
@@ -279,16 +286,16 @@
   <!-- 5K / Sub 15 min -->
   <div data-goal-panel="15">
     <p class="plan-pace">Ritmo medio para la marca: 3:00 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Cuatro días de carrera por semana y dos días de fuerza: tren inferior los lunes y tren superior los miércoles. Core los viernes. Alterna Pull en las semanas 1 y 3 con Push en las semanas 2 y 4. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 5K · Sub 15 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>35 min suave (4:00–4:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 2 min a ritmo objetivo (3:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>40 min suave (4:00–4:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>37 min suave (4:00–4:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>43 min suave (4:00–4:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>40 min suave (4:00–4:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>45 min suave (4:00–4:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>35 min suave (4:00–4:40 min/km)</td><td>20 min fuerza suave</td><td>35 min suave (4:00–4:40 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>40 min suave (4:00–4:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>35 min suave (4:00–4:40 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 3 × 2 min a ritmo objetivo (3:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>35 min suave (4:00–4:40 min/km)</td><td>40 min suave (4:00–4:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>37 min suave (4:00–4:40 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>37 min suave (4:00–4:40 min/km)</td><td>43 min suave (4:00–4:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>40 min suave (4:00–4:40 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>40 min suave (4:00–4:40 min/km)</td><td>45 min suave (4:00–4:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>40 min suave (4:00–4:40 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>40 min suave (4:00–4:40 min/km)</td><td>45 min suave (4:00–4:40 min/km)</td></tr>
           </tbody>
         </table>
       </div>
@@ -307,16 +314,16 @@
   <!-- 10K / Terminar la distancia -->
   <div data-goal-panel="finish">
     <p class="plan-pace">Objetivo: completar la distancia sin buscar una marca.</p>
-    <p class="plan-summary">Tres días de carrera por semana. Necesitas una base previa: rodajes habituales de 30 minutos. No es un plan para empezar desde cero.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza. Necesitas una base previa: rodajes habituales de 30 minutos. No es un plan para empezar desde cero.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 10K · Terminar la distancia</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>30 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>25 min suave, a ritmo de conversación</td><td>Descanso</td><td>Descanso / movilidad</td><td>35 min suave, a ritmo de conversación</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>30 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>30 min suave, a ritmo de conversación</td><td>Descanso</td><td>Descanso / movilidad</td><td>40 min suave, a ritmo de conversación</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>35 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>30 min suave, a ritmo de conversación</td><td>Descanso</td><td>Descanso / movilidad</td><td>45 min suave, a ritmo de conversación</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>25 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>25 min suave, a ritmo de conversación</td><td>Descanso</td><td>Descanso / movilidad</td><td>35 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>30 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>25 min suave, a ritmo de conversación</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>35 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>30 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>30 min suave, a ritmo de conversación</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>35 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>30 min suave, a ritmo de conversación</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>35 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>30 min suave, a ritmo de conversación</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave, a ritmo de conversación</td></tr>
           </tbody>
         </table>
       </div>
@@ -324,16 +331,16 @@
   <!-- 10K / Sub 1 h -->
   <div data-goal-panel="60">
     <p class="plan-pace">Ritmo medio para la marca: 6:00 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 10K · Sub 1 h</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>30 min suave (7:00–7:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>35 min suave (7:00–7:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>30 min suave (7:00–7:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>40 min suave (7:00–7:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>35 min suave (7:00–7:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>45 min suave (7:00–7:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>25 min suave (7:00–7:40 min/km)</td><td>20 min fuerza suave</td><td>25 min suave (7:00–7:40 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>35 min suave (7:00–7:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>30 min suave (7:00–7:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 3 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>35 min suave (7:00–7:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>30 min suave (7:00–7:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave (7:00–7:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>35 min suave (7:00–7:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (7:00–7:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>35 min suave (7:00–7:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (6:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (7:00–7:40 min/km)</td></tr>
           </tbody>
         </table>
       </div>
@@ -341,16 +348,16 @@
   <!-- 10K / Sub 50 min -->
   <div data-goal-panel="50">
     <p class="plan-pace">Ritmo medio para la marca: 5:00 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 10K · Sub 50 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>35 min suave (6:00–6:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>40 min suave (6:00–6:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>35 min suave (6:00–6:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>45 min suave (6:00–6:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>40 min suave (6:00–6:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>50 min suave (6:00–6:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>30 min suave (6:00–6:40 min/km)</td><td>20 min fuerza suave</td><td>30 min suave (6:00–6:40 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>40 min suave (6:00–6:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>35 min suave (6:00–6:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 3 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave (6:00–6:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>35 min suave (6:00–6:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (6:00–6:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>40 min suave (6:00–6:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>50 min suave (6:00–6:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>40 min suave (6:00–6:40 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (5:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>50 min suave (6:00–6:40 min/km)</td></tr>
           </tbody>
         </table>
       </div>
@@ -358,16 +365,16 @@
   <!-- 10K / Sub 45 min -->
   <div data-goal-panel="45">
     <p class="plan-pace">Ritmo medio para la marca: 4:30 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 10K · Sub 45 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>40 min suave (5:30–6:10 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 2 min a ritmo objetivo (4:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>45 min suave (5:30–6:10 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>40 min suave (5:30–6:10 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>50 min suave (5:30–6:10 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>45 min suave (5:30–6:10 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>55 min suave (5:30–6:10 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>35 min suave (5:30–6:10 min/km)</td><td>20 min fuerza suave</td><td>35 min suave (5:30–6:10 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>45 min suave (5:30–6:10 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>40 min suave (5:30–6:10 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 3 × 2 min a ritmo objetivo (4:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (5:30–6:10 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>40 min suave (5:30–6:10 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>50 min suave (5:30–6:10 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>45 min suave (5:30–6:10 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>55 min suave (5:30–6:10 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>45 min suave (5:30–6:10 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>55 min suave (5:30–6:10 min/km)</td></tr>
           </tbody>
         </table>
       </div>
@@ -375,16 +382,16 @@
   <!-- 10K / Sub 40 min -->
   <div data-goal-panel="40">
     <p class="plan-pace">Ritmo medio para la marca: 4:00 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza: tren inferior los lunes y tren superior los miércoles. Core los viernes. Alterna Pull en las semanas 1 y 3 con Push en las semanas 2 y 4. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 10K · Sub 40 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>45 min suave (5:00–5:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>50 min suave (5:00–5:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>45 min suave (5:00–5:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>55 min suave (5:00–5:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>50 min suave (5:00–5:40 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>60 min suave (5:00–5:40 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>40 min suave (5:00–5:40 min/km)</td><td>20 min fuerza suave</td><td>40 min suave (5:00–5:40 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>50 min suave (5:00–5:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>45 min suave (5:00–5:40 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 3 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>50 min suave (5:00–5:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>45 min suave (5:00–5:40 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>55 min suave (5:00–5:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>50 min suave (5:00–5:40 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>60 min suave (5:00–5:40 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>50 min suave (5:00–5:40 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (4:00 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>60 min suave (5:00–5:40 min/km)</td></tr>
           </tbody>
         </table>
       </div>
@@ -392,23 +399,23 @@
   <!-- 10K / Sub 35 min -->
   <div data-goal-panel="35">
     <p class="plan-pace">Ritmo medio para la marca: 3:30 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza: tren inferior los lunes y tren superior los miércoles. Core los viernes. Alterna Pull en las semanas 1 y 3 con Push en las semanas 2 y 4. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
           <caption>Mes gratuito · 10K · Sub 35 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>50 min suave (4:30–5:10 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 2 min a ritmo objetivo (3:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>55 min suave (4:30–5:10 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>50 min suave (4:30–5:10 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>60 min suave (4:30–5:10 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>55 min suave (4:30–5:10 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>65 min suave (4:30–5:10 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>45 min suave (4:30–5:10 min/km)</td><td>20 min fuerza suave</td><td>45 min suave (4:30–5:10 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>55 min suave (4:30–5:10 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>50 min suave (4:30–5:10 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 3 × 2 min a ritmo objetivo (3:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>55 min suave (4:30–5:10 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>50 min suave (4:30–5:10 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>60 min suave (4:30–5:10 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>55 min suave (4:30–5:10 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>65 min suave (4:30–5:10 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>55 min suave (4:30–5:10 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 2 min a ritmo objetivo (3:30 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>65 min suave (4:30–5:10 min/km)</td></tr>
           </tbody>
         </table>
       </div>
   </div>
 </div>
 <div data-asphalt-distance="21">
-  <h3 class="plan-distance-heading">PLANES 21K</h3>
+  <h3 class="plan-distance-heading">PLANES Medio maratón</h3>
   <div class="goal-selector" data-plan-controls hidden><label for="goal-21">MARCA OBJETIVO<select id="goal-21" data-goal-select>
     <option value="finish">Terminar la distancia</option>
     <option value="120">Sub 2 h</option>
@@ -416,94 +423,94 @@
     <option value="90">Sub 1 h 30 min</option>
     <option value="75">Sub 1 h 15 min</option>
   </select></label></div>
-  <!-- 21K / Terminar la distancia -->
+  <!-- Medio maratón / Terminar la distancia -->
   <div data-goal-panel="finish">
     <p class="plan-pace">Objetivo: completar la distancia sin buscar una marca.</p>
-    <p class="plan-summary">Tres días de carrera por semana. Necesitas una base previa: rodajes habituales de 60 minutos. No es un plan para empezar desde cero.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza. Necesitas una base previa: rodajes habituales de 60 minutos. No es un plan para empezar desde cero.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 21K · Terminar la distancia</caption>
+          <caption>Mes gratuito · Medio maratón · Terminar la distancia</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>35 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>40 min suave, a ritmo de conversación</td><td>Descanso</td><td>Descanso / movilidad</td><td>55 min suave, a ritmo de conversación</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>40 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>40 min suave, a ritmo de conversación</td><td>Descanso</td><td>Descanso / movilidad</td><td>60 min suave, a ritmo de conversación</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>40 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>45 min suave, a ritmo de conversación</td><td>Descanso</td><td>Descanso / movilidad</td><td>65 min suave, a ritmo de conversación</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>30 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>35 min suave, a ritmo de conversación</td><td>Descanso</td><td>Descanso / movilidad</td><td>50 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>35 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>40 min suave, a ritmo de conversación</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>55 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>40 min suave, a ritmo de conversación</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>60 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>45 min suave, a ritmo de conversación</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>65 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>45 min suave, a ritmo de conversación</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>65 min suave, a ritmo de conversación</td></tr>
           </tbody>
         </table>
       </div>
   </div>
-  <!-- 21K / Sub 2 h -->
+  <!-- Medio maratón / Sub 2 h -->
   <div data-goal-panel="120">
     <p class="plan-pace">Ritmo medio para la marca: 5:41 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 21K · Sub 2 h</caption>
+          <caption>Mes gratuito · Medio maratón · Sub 2 h</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>35 min suave (6:41–7:21 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>55 min suave (6:41–7:21 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>40 min suave (6:41–7:21 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>60 min suave (6:41–7:21 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>40 min suave (6:41–7:21 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>65 min suave (6:41–7:21 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>30 min suave (6:41–7:21 min/km)</td><td>20 min fuerza suave</td><td>35 min suave (6:41–7:21 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>50 min suave (6:41–7:21 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>35 min suave (6:41–7:21 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 3 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>55 min suave (6:41–7:21 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave (6:41–7:21 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>60 min suave (6:41–7:21 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave (6:41–7:21 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>65 min suave (6:41–7:21 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave (6:41–7:21 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>65 min suave (6:41–7:21 min/km)</td></tr>
           </tbody>
         </table>
       </div>
   </div>
-  <!-- 21K / Sub 1 h 45 min -->
+  <!-- Medio maratón / Sub 1 h 45 min -->
   <div data-goal-panel="105">
     <p class="plan-pace">Ritmo medio para la marca: 4:59 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 21K · Sub 1 h 45 min</caption>
+          <caption>Mes gratuito · Medio maratón · Sub 1 h 45 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>40 min suave (5:59–6:39 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>60 min suave (5:59–6:39 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>45 min suave (5:59–6:39 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>65 min suave (5:59–6:39 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>45 min suave (5:59–6:39 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>70 min suave (5:59–6:39 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>35 min suave (5:59–6:39 min/km)</td><td>20 min fuerza suave</td><td>40 min suave (5:59–6:39 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>55 min suave (5:59–6:39 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave (5:59–6:39 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 3 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>60 min suave (5:59–6:39 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (5:59–6:39 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>65 min suave (5:59–6:39 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (5:59–6:39 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>70 min suave (5:59–6:39 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (5:59–6:39 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>70 min suave (5:59–6:39 min/km)</td></tr>
           </tbody>
         </table>
       </div>
   </div>
-  <!-- 21K / Sub 1 h 30 min -->
+  <!-- Medio maratón / Sub 1 h 30 min -->
   <div data-goal-panel="90">
     <p class="plan-pace">Ritmo medio para la marca: 4:16 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza: tren inferior los lunes y tren superior los miércoles. Core los viernes. Alterna Pull en las semanas 1 y 3 con Push en las semanas 2 y 4. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 21K · Sub 1 h 30 min</caption>
+          <caption>Mes gratuito · Medio maratón · Sub 1 h 30 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>45 min suave (5:16–5:56 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>65 min suave (5:16–5:56 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>50 min suave (5:16–5:56 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>70 min suave (5:16–5:56 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>50 min suave (5:16–5:56 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>75 min suave (5:16–5:56 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>40 min suave (5:16–5:56 min/km)</td><td>20 min fuerza suave</td><td>45 min suave (5:16–5:56 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>60 min suave (5:16–5:56 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>45 min suave (5:16–5:56 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 3 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>65 min suave (5:16–5:56 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>50 min suave (5:16–5:56 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>70 min suave (5:16–5:56 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>50 min suave (5:16–5:56 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>75 min suave (5:16–5:56 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>50 min suave (5:16–5:56 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>75 min suave (5:16–5:56 min/km)</td></tr>
           </tbody>
         </table>
       </div>
   </div>
-  <!-- 21K / Sub 1 h 15 min -->
+  <!-- Medio maratón / Sub 1 h 15 min -->
   <div data-goal-panel="75">
     <p class="plan-pace">Ritmo medio para la marca: 3:33 min/km</p>
-    <p class="plan-summary">Tres días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Tres días de carrera por semana. Dos días de fuerza: tren inferior los lunes y tren superior los miércoles. Core los viernes. Alterna Pull en las semanas 1 y 3 con Push en las semanas 2 y 4. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 21K · Sub 1 h 15 min</caption>
+          <caption>Mes gratuito · Medio maratón · Sub 1 h 15 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>50 min suave (4:33–5:13 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 3 min a ritmo objetivo (3:33 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>70 min suave (4:33–5:13 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>55 min suave (4:33–5:13 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (3:33 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>75 min suave (4:33–5:13 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>55 min suave (4:33–5:13 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (3:33 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>80 min suave (4:33–5:13 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>45 min suave (4:33–5:13 min/km)</td><td>20 min fuerza suave</td><td>50 min suave (4:33–5:13 min/km)</td><td>Descanso</td><td>Descanso / movilidad</td><td>65 min suave (4:33–5:13 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>50 min suave (4:33–5:13 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 3 × 3 min a ritmo objetivo (3:33 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>70 min suave (4:33–5:13 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>55 min suave (4:33–5:13 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (3:33 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>75 min suave (4:33–5:13 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>55 min suave (4:33–5:13 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (3:33 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>80 min suave (4:33–5:13 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>55 min suave (4:33–5:13 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (3:33 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>Descanso / movilidad</td><td>80 min suave (4:33–5:13 min/km)</td></tr>
           </tbody>
         </table>
       </div>
   </div>
 </div>
 <div data-asphalt-distance="42">
-  <h3 class="plan-distance-heading">PLANES 42K</h3>
+  <h3 class="plan-distance-heading">PLANES Maratón</h3>
   <div class="goal-selector" data-plan-controls hidden><label for="goal-42">MARCA OBJETIVO<select id="goal-42" data-goal-select>
     <option value="finish">Terminar la distancia</option>
     <option value="270">Sub 4 h 30 min</option>
@@ -511,98 +518,98 @@
     <option value="210">Sub 3 h 30 min</option>
     <option value="180">Sub 3 h</option>
   </select></label></div>
-  <!-- 42K / Terminar la distancia -->
+  <!-- Maratón / Terminar la distancia -->
   <div data-goal-panel="finish">
     <p class="plan-pace">Objetivo: completar la distancia sin buscar una marca.</p>
-    <p class="plan-summary">Cuatro días de carrera por semana. Necesitas una base previa: rodajes habituales de 80 minutos. No es un plan para empezar desde cero.</p>
+    <p class="plan-summary">Cuatro días de carrera por semana. Dos días de fuerza. Necesitas una base previa: rodajes habituales de 80 minutos. No es un plan para empezar desde cero.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 42K · Terminar la distancia</caption>
+          <caption>Mes gratuito · Maratón · Terminar la distancia</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>40 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>45 min suave, a ritmo de conversación</td><td>Descanso</td><td>25 min suave, a ritmo de conversación</td><td>70 min suave, a ritmo de conversación</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>45 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>45 min suave, a ritmo de conversación</td><td>Descanso</td><td>25 min suave, a ritmo de conversación</td><td>75 min suave, a ritmo de conversación</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>45 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>50 min suave, a ritmo de conversación</td><td>Descanso</td><td>25 min suave, a ritmo de conversación</td><td>80 min suave, a ritmo de conversación</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>35 min suave, a ritmo de conversación</td><td>20 min fuerza suave</td><td>40 min suave, a ritmo de conversación</td><td>Descanso</td><td>20 min suave, a ritmo de conversación</td><td>60 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>45 min suave, a ritmo de conversación</td><td>Descanso</td><td>25 min suave, a ritmo de conversación<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>70 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>45 min suave, a ritmo de conversación</td><td>Descanso</td><td>25 min suave, a ritmo de conversación<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>75 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>50 min suave, a ritmo de conversación</td><td>Descanso</td><td>25 min suave, a ritmo de conversación<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>80 min suave, a ritmo de conversación</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave, a ritmo de conversación</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>50 min suave, a ritmo de conversación</td><td>Descanso</td><td>25 min suave, a ritmo de conversación<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>80 min suave, a ritmo de conversación</td></tr>
           </tbody>
         </table>
       </div>
   </div>
-  <!-- 42K / Sub 4 h 30 min -->
+  <!-- Maratón / Sub 4 h 30 min -->
   <div data-goal-panel="270">
     <p class="plan-pace">Ritmo medio para la marca: 6:24 min/km</p>
-    <p class="plan-summary">Cuatro días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Cuatro días de carrera por semana. Dos días de fuerza. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 42K · Sub 4 h 30 min</caption>
+          <caption>Mes gratuito · Maratón · Sub 4 h 30 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>40 min suave (7:24–8:04 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 3 min a ritmo objetivo (6:24 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>25 min suave (7:24–8:04 min/km)</td><td>70 min suave (7:24–8:04 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>45 min suave (7:24–8:04 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (6:24 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>25 min suave (7:24–8:04 min/km)</td><td>75 min suave (7:24–8:04 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>45 min suave (7:24–8:04 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (6:24 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>25 min suave (7:24–8:04 min/km)</td><td>80 min suave (7:24–8:04 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>35 min suave (7:24–8:04 min/km)</td><td>20 min fuerza suave</td><td>40 min suave (7:24–8:04 min/km)</td><td>Descanso</td><td>20 min suave (7:24–8:04 min/km)</td><td>60 min suave (7:24–8:04 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>40 min suave (7:24–8:04 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 3 × 3 min a ritmo objetivo (6:24 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>25 min suave (7:24–8:04 min/km)<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>70 min suave (7:24–8:04 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (7:24–8:04 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (6:24 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>25 min suave (7:24–8:04 min/km)<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>75 min suave (7:24–8:04 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (7:24–8:04 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (6:24 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>25 min suave (7:24–8:04 min/km)<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>80 min suave (7:24–8:04 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (7:24–8:04 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (6:24 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>25 min suave (7:24–8:04 min/km)<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>80 min suave (7:24–8:04 min/km)</td></tr>
           </tbody>
         </table>
       </div>
   </div>
-  <!-- 42K / Sub 4 h -->
+  <!-- Maratón / Sub 4 h -->
   <div data-goal-panel="240">
     <p class="plan-pace">Ritmo medio para la marca: 5:41 min/km</p>
-    <p class="plan-summary">Cuatro días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Cuatro días de carrera por semana. Dos días de fuerza. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 42K · Sub 4 h</caption>
+          <caption>Mes gratuito · Maratón · Sub 4 h</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>45 min suave (6:41–7:21 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>30 min suave (6:41–7:21 min/km)</td><td>75 min suave (6:41–7:21 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>50 min suave (6:41–7:21 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>30 min suave (6:41–7:21 min/km)</td><td>80 min suave (6:41–7:21 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>50 min suave (6:41–7:21 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>30 min suave (6:41–7:21 min/km)</td><td>85 min suave (6:41–7:21 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>40 min suave (6:41–7:21 min/km)</td><td>20 min fuerza suave</td><td>45 min suave (6:41–7:21 min/km)</td><td>Descanso</td><td>25 min suave (6:41–7:21 min/km)</td><td>65 min suave (6:41–7:21 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min suave (6:41–7:21 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 3 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>30 min suave (6:41–7:21 min/km)<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>75 min suave (6:41–7:21 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>50 min suave (6:41–7:21 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>30 min suave (6:41–7:21 min/km)<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>80 min suave (6:41–7:21 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>50 min suave (6:41–7:21 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>30 min suave (6:41–7:21 min/km)<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>85 min suave (6:41–7:21 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>50 min suave (6:41–7:21 min/km)</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (5:41 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>30 min suave (6:41–7:21 min/km)<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>85 min suave (6:41–7:21 min/km)</td></tr>
           </tbody>
         </table>
       </div>
   </div>
-  <!-- 42K / Sub 3 h 30 min -->
+  <!-- Maratón / Sub 3 h 30 min -->
   <div data-goal-panel="210">
     <p class="plan-pace">Ritmo medio para la marca: 4:59 min/km</p>
-    <p class="plan-summary">Cuatro días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Cuatro días de carrera por semana. Dos días de fuerza: tren inferior los lunes y tren superior los miércoles. Core los viernes. Alterna Pull en las semanas 1 y 3 con Push en las semanas 2 y 4. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 42K · Sub 3 h 30 min</caption>
+          <caption>Mes gratuito · Maratón · Sub 3 h 30 min</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>50 min suave (5:59–6:39 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>35 min suave (5:59–6:39 min/km)</td><td>80 min suave (5:59–6:39 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>55 min suave (5:59–6:39 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>35 min suave (5:59–6:39 min/km)</td><td>85 min suave (5:59–6:39 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>55 min suave (5:59–6:39 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>35 min suave (5:59–6:39 min/km)</td><td>90 min suave (5:59–6:39 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>45 min suave (5:59–6:39 min/km)</td><td>20 min fuerza suave</td><td>50 min suave (5:59–6:39 min/km)</td><td>Descanso</td><td>30 min suave (5:59–6:39 min/km)</td><td>70 min suave (5:59–6:39 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>50 min suave (5:59–6:39 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 3 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>35 min suave (5:59–6:39 min/km)</td><td>80 min suave (5:59–6:39 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>55 min suave (5:59–6:39 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>35 min suave (5:59–6:39 min/km)</td><td>85 min suave (5:59–6:39 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>55 min suave (5:59–6:39 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>35 min suave (5:59–6:39 min/km)</td><td>90 min suave (5:59–6:39 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>55 min suave (5:59–6:39 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:59 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>35 min suave (5:59–6:39 min/km)</td><td>90 min suave (5:59–6:39 min/km)</td></tr>
           </tbody>
         </table>
       </div>
   </div>
-  <!-- 42K / Sub 3 h -->
+  <!-- Maratón / Sub 3 h -->
   <div data-goal-panel="180">
     <p class="plan-pace">Ritmo medio para la marca: 4:16 min/km</p>
-    <p class="plan-summary">Cuatro días de carrera por semana. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
+    <p class="plan-summary">Cuatro días de carrera por semana. Dos días de fuerza: tren inferior los lunes y tren superior los miércoles. Core los viernes. Alterna Pull en las semanas 1 y 3 con Push en las semanas 2 y 4. Bloque para corredores que ya entrenan con regularidad. La marca elegida cambia los ritmos orientativos, la duración de los rodajes y la sesión del jueves. Debes poder completar cómodamente la primera semana con tu nivel actual; elegir una marca no acredita que estés preparado para ella.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de asfalto, desplazable horizontalmente">
         <table>
-          <caption>Mes gratuito · 42K · Sub 3 h</caption>
+          <caption>Mes gratuito · Maratón · Sub 3 h</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>55 min suave (5:16–5:56 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 3 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>40 min suave (5:16–5:56 min/km)</td><td>85 min suave (5:16–5:56 min/km)</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>60 min suave (5:16–5:56 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>40 min suave (5:16–5:56 min/km)</td><td>90 min suave (5:16–5:56 min/km)</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>60 min suave (5:16–5:56 min/km)</td><td>20 min fuerza suave</td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td>Descanso</td><td>40 min suave (5:16–5:56 min/km)</td><td>95 min suave (5:16–5:56 min/km)</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>50 min suave (5:16–5:56 min/km)</td><td>20 min fuerza suave</td><td>55 min suave (5:16–5:56 min/km)</td><td>Descanso</td><td>35 min suave (5:16–5:56 min/km)</td><td>75 min suave (5:16–5:56 min/km)</td></tr>
+          <tr><th scope="row">Semana 1</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>55 min suave (5:16–5:56 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 3 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>40 min suave (5:16–5:56 min/km)</td><td>85 min suave (5:16–5:56 min/km)</td></tr>
+          <tr><th scope="row">Semana 2</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>60 min suave (5:16–5:56 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>40 min suave (5:16–5:56 min/km)</td><td>90 min suave (5:16–5:56 min/km)</td></tr>
+          <tr><th scope="row">Semana 3</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>60 min suave (5:16–5:56 min/km)</td><td><a href="pull.html" class="exercise-plan-link">Fuerza de tren superior · Pull ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>40 min suave (5:16–5:56 min/km)</td><td>95 min suave (5:16–5:56 min/km)</td></tr>
+          <tr><th scope="row">Semana 4</th><td><a href="piernas.html" class="exercise-plan-link">Fuerza de tren inferior ↗</a></td><td>60 min suave (5:16–5:56 min/km)</td><td><a href="push.html" class="exercise-plan-link">Fuerza de tren superior · Push ↗</a></td><td>10 min suave + 4 × 3 min a ritmo objetivo (4:16 min/km), con 2 min suave entre repeticiones + 10 min suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>40 min suave (5:16–5:56 min/km)</td><td>95 min suave (5:16–5:56 min/km)</td></tr>
           </tbody>
         </table>
       </div>
   </div>
 </div>
-<div class="notes"><p><strong>Cómo leerlo.</strong> Suave: un ritmo que permita conversar. Fuerza: ejercicios básicos de piernas y tronco. Mantén los descansos y no fuerces ante dolor o fatiga inusual.</p><p><strong>Borrador del mes gratuito.</strong> Ejemplos orientativos de base pendientes de revisión del entrenador antes de publicar. No son una preparación completa para competir ni una planificación adaptada a tu nivel.</p></div><div class="inline"><p>El primer mes es el punto de partida.<br><strong>Dale continuidad a tu objetivo.</strong></p><a href="#planes">Ver opciones de continuidad ↗</a></div></div></section>
+<div class="notes"><p><strong>Cómo leerlo.</strong> Suave: un ritmo que permita conversar. Fuerza: core los miércoles y circuito de fuerza los sábados. En Medio maratón (terminar, sub 2 h y sub 1 h 45) y Maratón (terminar, sub 4 h 30 y sub 4 h), el circuito sin impacto se hace los lunes y sábados, y el core los miércoles. Si hay rodaje el sábado, se mantiene junto al circuito. Los enlaces abren la técnica, los niveles y la opción de imprimir. En 5K sub 20 y sub 15, 10K sub 40 y sub 35, Medio maratón sub 1 h 30 y sub 1 h 15, y Maratón sub 3 h 30 y sub 3 h, la distribución es distinta: tren inferior los lunes, tren superior los miércoles y core los viernes, alternando Pull y Push cada semana; los enlaces de cada sesión abren los circuitos de piernas, Pull y Push. Mantén los descansos y no fuerces ante dolor o fatiga inusual.</p></div><div class="inline"><p>El primer mes es el punto de partida.<br><strong>Dale continuidad a tu objetivo.</strong></p><a href="#planes">Ver opciones de continuidad ↗</a></div></div></section>
 <section id="trail" class="running-addition trail-section">
   <div class="section-inner">
     <div class="trail-heading">
     <div class="section-tag"><div class="section-tag-line"></div><span class="section-tag-text">TRAIL RUNNING / CAMBIA EL ASFALTO POR MONTAÑA</span></div>
-    <h2 class="section-title trail-title">¿Y SI TIENES SINDROME DE CABRA MONTESA?</h2>
+    <h2 class="section-title trail-title">¿Y SI TIENES SÍNDROME DE CABRA MONTESA?</h2>
     <p class="trail-subtitle">AQUÍ TIENES TUS PLANES DE TRAIL RUNNING</p>
     <p class="trail-intro">Elige tu reto de montaña. Aquí el entrenamiento se organiza por tiempo, esfuerzo y desnivel, en lugar de trasladar los ritmos del asfalto al sendero.</p>
     <div class="trail-terrain" aria-label="Modalidades de montaña"><span>↗ DESNIVEL</span><span>⌁ SENDEROS</span><span>△ LARGA DISTANCIA</span></div>
@@ -617,10 +624,10 @@
           <caption>Mes gratuito · Km vertical · 4 semanas de base</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>30 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>15 min suave + 4 × 2 min de subida a esfuerzo controlado, recuperando al bajar + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>45 min de sendero suave, alternando correr y caminar en subida</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>35 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>15 min suave + 5 × 2 min de subida a esfuerzo controlado, recuperando al bajar + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>50 min de sendero suave, alternando correr y caminar en subida</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>35 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>15 min suave + 4 × 3 min de subida a esfuerzo controlado, recuperando al bajar + 10 min suave</td><td>Descanso</td><td>Descanso / movilidad</td><td>55 min de sendero suave, alternando correr y caminar en subida</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>25 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>30 min suaves en terreno ondulado, sin repeticiones</td><td>Descanso</td><td>Descanso / movilidad</td><td>40 min de sendero fácil</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>30 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>15 min suave + 4 × 2 min de subida a esfuerzo controlado, recuperando al bajar + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>45 min de sendero suave, alternando correr y caminar en subida</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>35 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>15 min suave + 5 × 2 min de subida a esfuerzo controlado, recuperando al bajar + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>50 min de sendero suave, alternando correr y caminar en subida</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>35 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>15 min suave + 4 × 3 min de subida a esfuerzo controlado, recuperando al bajar + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>55 min de sendero suave, alternando correr y caminar en subida</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>35 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>15 min suave + 4 × 3 min de subida a esfuerzo controlado, recuperando al bajar + 10 min suave</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>55 min de sendero suave, alternando correr y caminar en subida</td></tr>
           </tbody>
         </table>
       </div>
@@ -632,10 +639,10 @@
           <caption>Mes gratuito · Maratón trail · 4 semanas de base</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>40 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>40 min suaves en terreno ondulado, caminando las pendientes fuertes</td><td>Descanso</td><td>Descanso / movilidad</td><td>75 min por senderos a esfuerzo cómodo</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>45 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>45 min suaves en terreno ondulado, con atención al apoyo y al control de bajada</td><td>Descanso</td><td>Descanso / movilidad</td><td>80 min por senderos a esfuerzo cómodo</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>45 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>50 min suaves por senderos con subidas sostenidas, sin forzar</td><td>Descanso</td><td>Descanso / movilidad</td><td>90 min por senderos a esfuerzo cómodo</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>35 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>35 min suaves en terreno fácil</td><td>Descanso</td><td>Descanso / movilidad</td><td>65 min por senderos fáciles</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>40 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>40 min suaves en terreno ondulado, caminando las pendientes fuertes</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>75 min por senderos a esfuerzo cómodo</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>45 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>45 min suaves en terreno ondulado, con atención al apoyo y al control de bajada</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>80 min por senderos a esfuerzo cómodo</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>45 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>50 min suaves por senderos con subidas sostenidas, sin forzar</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>90 min por senderos a esfuerzo cómodo</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>45 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>50 min suaves por senderos con subidas sostenidas, sin forzar</td><td>Descanso</td><td><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>90 min por senderos a esfuerzo cómodo</td></tr>
           </tbody>
         </table>
       </div>
@@ -647,23 +654,23 @@
           <caption>Mes gratuito · Ultramaratón trail · 4 semanas de base</caption>
           <thead><tr><th scope="col">Semana</th><th scope="col">Lunes</th><th scope="col">Martes</th><th scope="col">Miércoles</th><th scope="col">Jueves</th><th scope="col">Viernes</th><th scope="col">Sábado</th><th scope="col">Domingo</th></tr></thead>
           <tbody>
-          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>45 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>45 min suaves por senderos, alternando carrera y marcha en subida</td><td>Descanso</td><td>30 min de carrera suave en terreno fácil</td><td>90 min de montaña a esfuerzo cómodo</td></tr>
-          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>45 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>50 min suaves por senderos, practicando la marcha en subida</td><td>Descanso</td><td>30 min de carrera suave en terreno fácil</td><td>100 min de montaña a esfuerzo cómodo</td></tr>
-          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>50 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>50 min suaves por senderos, manteniendo un esfuerzo estable</td><td>Descanso</td><td>30 min de carrera suave en terreno fácil</td><td>110 min de montaña a esfuerzo cómodo</td></tr>
-          <tr><th scope="row">Semana 4 · descarga</th><td>Descanso</td><td>35 min de carrera suave</td><td>20 min de fuerza de piernas y tronco</td><td>35 min suaves en terreno fácil</td><td>Descanso</td><td>20 min de carrera suave en terreno fácil</td><td>75 min por senderos fáciles</td></tr>
+          <tr><th scope="row">Semana 1</th><td>Descanso</td><td>45 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>45 min suaves por senderos, alternando carrera y marcha en subida</td><td>Descanso</td><td>30 min de carrera suave en terreno fácil<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>90 min de montaña a esfuerzo cómodo</td></tr>
+          <tr><th scope="row">Semana 2</th><td>Descanso</td><td>45 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>50 min suaves por senderos, practicando la marcha en subida</td><td>Descanso</td><td>30 min de carrera suave en terreno fácil<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>100 min de montaña a esfuerzo cómodo</td></tr>
+          <tr><th scope="row">Semana 3</th><td>Descanso</td><td>50 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>50 min suaves por senderos, manteniendo un esfuerzo estable</td><td>Descanso</td><td>30 min de carrera suave en terreno fácil<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>110 min de montaña a esfuerzo cómodo</td></tr>
+          <tr><th scope="row">Semana 4</th><td>Descanso</td><td>50 min de carrera suave</td><td><a href="core.html" class="exercise-plan-link">Circuito de core ↗</a></td><td>50 min suaves por senderos, manteniendo un esfuerzo estable</td><td>Descanso</td><td>30 min de carrera suave en terreno fácil<br><a href="fuerza.html" class="exercise-plan-link">Circuito de fuerza sin impacto ↗</a></td><td>110 min de montaña a esfuerzo cómodo</td></tr>
           </tbody>
         </table>
       </div>
 </div>
-    <div class="notes"><p><strong>La montaña tiene sus reglas.</strong> Mantén un esfuerzo cómodo en los rodajes, camina en las pendientes cuando lo necesites y prioriza el control en los descensos. El tiempo y la dificultad cambian con el terreno y el desnivel.</p><p><strong>Borradores pendientes de revisión.</strong> Son ejemplos de cuatro semanas de base para corredores con experiencia en montaña, no una preparación completa. La distancia, el desnivel y la dificultad de tu carrera requieren ajustar el plan con el entrenador.</p></div>
+    <div class="notes"><p><strong>La montaña tiene sus reglas.</strong> Mantén un esfuerzo cómodo en los rodajes, camina en las pendientes cuando lo necesites y prioriza el control en los descensos. El tiempo y la dificultad cambian con el terreno y el desnivel.</p></div>
     <div class="inline"><p>¿Tu carrera tiene un perfil especial?<br><strong>Prepara la montaña con un plan para tu objetivo.</strong></p><a href="contacto.html?plan=personalizado">Solicitar planificación personalizada ↗</a></div>
   </div>
 </section>
 
 <section id="planes" class="running-addition"><div class="section-inner"><div class="services-header"><div><p class="section-tag-text">03 / ELIGE CÓMO SEGUIR</p><h2 class="section-title running-title">TU PLAN.<br>TU FORMA DE CORRER.</h2></div><p>Entrena por tu cuenta con una estructura o cuenta con un entrenador que ajuste tu semana. Tú eliges cuánto acompañamiento necesitas.</p></div><div class="pricing">
-<article><p class="section-tag-text">PARA CONOCER EL MÉTODO</p><h3>Mes gratuito</h3><p class="price">0 €<small>/ acceso libre</small></p><p>Una primera toma de contacto, directamente en la web.</p><ul><li>Cuatro semanas de ejemplo</li><li>Tablas de asfalto y trail running</li><li>Sin cuenta y sin tarjeta</li></ul><a class="btn-primary" href="#gratis">Consultar tabla ↗</a></article>
-<article class="featured"><span class="label">ESTRUCTURA + AUTONOMÍA</span><p class="section-tag-text">SUSCRIPCIÓN MENSUAL</p><h3>Plan + app</h3><p class="price">29,99 €<small>/ mes</small></p><p>Continúa con el plan completo para tu distancia y llévalo en Trainerplan.</p><ul><li>Acceso al plan completo con suscripción</li><li>Entrenamientos en Trainerplan</li><li>Estructura para tu objetivo</li><li>Sin ajustes personales semanales</li></ul><a class="btn-primary" href="contacto.html?plan=app">Solicitar suscripción ↗</a><small class="availability">Alta por contacto. Pago online pendiente de activar.</small></article>
-<article><p class="section-tag-text">SEGUIMIENTO PERSONAL</p><h3>Tu semana, a medida</h3><p class="price">69,99 €<small>/ mes</small></p><p>Un plan que se adapta a cómo entrenas y al tiempo que tienes.</p><ul><li>Planificación personalizada cada semana</li><li>Ajustes según evolución y disponibilidad</li><li>Contacto directo con el entrenador</li><li>Entrenamientos en Trainerplan</li></ul><a class="btn-primary" href="contacto.html?plan=personalizado">Solicitar seguimiento ↗</a><small class="availability">Cuota mensual · planificación semanal. Alta por contacto.</small></article></div></div></section>
+<article><p class="section-tag-text">PARA CONOCER EL MÉTODO</p><h3>Mes gratuito</h3><p class="price">0 €<small>/ acceso libre</small></p><p>Una primera toma de contacto, directamente en la web.</p><ul><li>Cuatro semanas de ejemplo</li><li>Tablas de asfalto y trail running</li><li>Sin cuenta y sin tarjeta</li></ul><div class="plan-actions"><a class="btn-primary" href="#gratis">Consultar tabla ↗</a><small class="availability" aria-hidden="true"></small></div></article>
+<article class="featured"><span class="label">ESTRUCTURA + AUTONOMÍA</span><p class="section-tag-text">SUSCRIPCIÓN MENSUAL</p><h3>Plan + app</h3><p class="price">29,99 €<small>/ mes</small></p><p>Continúa con el plan completo para tu distancia y llévalo en Trainerplan.</p><ul><li>Acceso al plan completo con suscripción</li><li>Estructura para tu objetivo</li><li>Entrenamientos estandarizados</li><li>Entrenamientos en Trainerplan</li></ul><div class="plan-actions"><a class="btn-primary" href="contacto.html?plan=app">Solicitar suscripción ↗</a><small class="availability">El pago de la suscripción se realiza mediante Stripe.</small></div></article>
+<article><p class="section-tag-text">SEGUIMIENTO PERSONAL</p><h3>Tu semana, a medida</h3><p class="price">69,99 €<small>/ mes</small></p><p>Un plan que se adapta a cómo entrenas y al tiempo que tienes.</p><ul><li>Planificación personalizada cada semana</li><li>Ajustes según evolución y disponibilidad</li><li>Contacto directo con el entrenador</li><li>Entrenamientos en Trainerplan</li></ul><div class="plan-actions"><a class="btn-primary" href="contacto.html?plan=personalizado">Solicitar seguimiento ↗</a><small class="availability">Cuota mensual · planificación semanal. Alta por contacto.</small></div></article></div></div></section>
 
 
 
@@ -671,6 +678,154 @@
   <!-- ═══════════════════════════════════════════
        LLAMADA A LA ACCIÓN FINAL
   ═══════════════════════════════════════════ -->
+  <section id="packs" class="running-addition" aria-labelledby="packs-title">
+    <div class="section-inner">
+      <div class="services-header">
+        <div>
+          <p class="section-tag-text">04 / TU PRÓXIMA LÍNEA DE SALIDA</p>
+          <h2 id="packs-title" class="section-title running-title">UNA CARRERA.<br>UN OBJETIVO.</h2>
+          <p class="packs-price">179,97 € <span>en pago único</span></p>
+          <p class="packs-price-detail">3 meses de preparación · Equivalente a 59,99 €/mes</p>
+        </div>
+        <p>Elige tu maratón de 2027 y prepara tu objetivo con uno de nuestros packs.</p>
+      </div>
+      <h3 class="race-pack-group-title">MARATONES EN ESPAÑA</h3>
+      <div class="race-packs">
+        <article class="race-pack" data-marathon-pack="madrid">
+          <span class="race-pack-distance">MARATÓN / 2027</span>
+          <h4>Pack Maratón<br>de Madrid</h4>
+          <p class="race-pack-date">25 de abril de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de enero de 2027, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://rocknrollmadridrun.com/informacion-general/" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=madrid">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="barcelona">
+          <span class="race-pack-distance">MARATÓN / 2027</span>
+          <h4>Pack Maratón<br>de Barcelona</h4>
+          <p class="race-pack-date">14 de marzo de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de diciembre de 2026, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://zurichmaratobarcelona.es/" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=barcelona">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="malaga">
+          <span class="race-pack-distance">MARATÓN / 2027</span>
+          <h4>Pack Maratón<br>de Málaga</h4>
+          <p class="race-pack-date">Fecha de 2027 pendiente de confirmar</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Fecha y plazo pendientes de confirmar. Consulta informativa; contratación aún no disponible.</p>
+          <a class="race-pack-source" href="https://www.generalimaratonmalaga.com/" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=malaga">CONSULTAR PRÓXIMA EDICIÓN ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="sevilla">
+          <span class="race-pack-distance">MARATÓN / 2027</span>
+          <h4>Pack Maratón<br>de Sevilla</h4>
+          <p class="race-pack-date">21 de febrero de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de noviembre de 2026, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://www.zurichmaratonsevilla.es/zms-preguntas-frecuentes" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=sevilla">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="valencia">
+          <span class="race-pack-distance">MARATÓN / 2027</span>
+          <h4>Pack Maratón<br>de Valencia</h4>
+          <p class="race-pack-date">Fecha de 2027 pendiente de confirmar</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Fecha y plazo pendientes de confirmar. Consulta informativa; contratación aún no disponible.</p>
+          <a class="race-pack-source" href="https://www.valenciaciudaddelrunning.com/maraton/reglamento-maraton-valencia/" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=valencia">CONSULTAR PRÓXIMA EDICIÓN ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="alicante">
+          <span class="race-pack-distance">MARATÓN / 2027</span>
+          <h4>Pack Maratón<br>de Alicante</h4>
+          <p class="race-pack-date">Fecha de 2027 pendiente de confirmar</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Fecha y plazo pendientes de confirmar. Consulta informativa; contratación aún no disponible.</p>
+          <a class="race-pack-source" href="https://maratonelchealicante.com/" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=alicante">CONSULTAR PRÓXIMA EDICIÓN ↗</a>
+        </article>
+      </div>
+
+      <h3 class="race-pack-group-title">WORLD MARATHON MAJORS</h3>
+      <div class="race-packs">
+        <article class="race-pack" data-marathon-pack="tokio">
+          <span class="race-pack-distance">MAJOR / 2027</span>
+          <h4>Pack Maratón<br>de Tokio</h4>
+          <p class="race-pack-date">7 de marzo de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de diciembre de 2026, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://www.marathon.tokyo/en/" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=tokio">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="boston">
+          <span class="race-pack-distance">MAJOR / 2027</span>
+          <h4>Pack Maratón<br>de Boston</h4>
+          <p class="race-pack-date">19 de abril de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de enero de 2027, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://www.baa.org/races/boston-marathon/history/" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=boston">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="londres">
+          <span class="race-pack-distance">MAJOR / 2027</span>
+          <h4>Pack Maratón<br>de Londres</h4>
+          <p class="race-pack-date">24 de abril de 2027 – 25 de abril de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de enero de 2027, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://www.londonmarathonevents.co.uk/london-marathon/event-overview" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=londres">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="ciudad-del-cabo">
+          <span class="race-pack-distance">MAJOR / 2027</span>
+          <h4>Pack Maratón<br>de Ciudad del Cabo</h4>
+          <p class="race-pack-date">23 de mayo de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de febrero de 2027, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://www.worldmarathonmajors.com/cape-town-major" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=ciudad-del-cabo">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="sidney">
+          <span class="race-pack-distance">MAJOR / 2027</span>
+          <h4>Pack Maratón<br>de Sídney</h4>
+          <p class="race-pack-date">29 de agosto de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de mayo de 2027, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://www.tcssydneymarathon.com/marathon" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=sidney">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="berlin">
+          <span class="race-pack-distance">MAJOR / 2027</span>
+          <h4>Pack Maratón<br>de Berlín</h4>
+          <p class="race-pack-date">26 de septiembre de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de junio de 2027, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://www.generali-berlin-marathon.com/en" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=berlin">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="chicago">
+          <span class="race-pack-distance">MAJOR / 2027</span>
+          <h4>Pack Maratón<br>de Chicago</h4>
+          <p class="race-pack-date">10 de octubre de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de julio de 2027, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://www.chicagomarathon.com/" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=chicago">SOLICITAR PACK ↗</a>
+        </article>
+        <article class="race-pack" data-marathon-pack="nueva-york">
+          <span class="race-pack-distance">MAJOR / 2027</span>
+          <h4>Pack Maratón<br>de Nueva York</h4>
+          <p class="race-pack-date">7 de noviembre de 2027</p>
+          <p>3 meses de preparación.</p>
+          <p class="race-pack-closing">Solicítalo hasta el 25 de agosto de 2027, incluido (horario de España peninsular).</p>
+          <a class="race-pack-source" href="https://prod.nyrr.org/tcsnycmarathon/home" target="_blank" rel="noopener noreferrer">Web oficial de la carrera ↗</a>
+          <a class="btn-primary" href="contacto.html?pack=nueva-york">SOLICITAR PACK ↗</a>
+        </article>
+      </div>
+      <p class="race-pack-deadline"><strong>Oferta de contratación anticipada.</strong> Disponible hasta el día 25, incluido, del mes anterior al inicio de los tres meses de preparación. Por ejemplo: si la maratón es en marzo, la preparación comprende enero, febrero y marzo, y el plazo termina el 25 de diciembre anterior. Después de esa fecha no se puede contratar el pack para esa edición. Estos packs incluyen únicamente la preparación: no incluyen dorsal, viaje ni alojamiento. Las fechas pendientes se actualizarán cuando se verifiquen en la web de la organización.</p>
+    </div>
+  </section>
+
   <section id="cta">
     <div class="mesh-gradient">
       <div class="mesh-blob mesh-blob-1"></div>
@@ -709,7 +864,7 @@
       </a>
 
       <div class="cta-notes">
-        <div class="cta-note"><div class="note-dot"></div>5K · 10K · 21K · 42K</div>
+        <div class="cta-note"><div class="note-dot"></div>5K · 10K · Medio maratón · Maratón</div>
         <div class="cta-note"><div class="note-dot"></div>Plan + Trainerplan: 29,99 €/mes</div>
         <div class="cta-note"><div class="note-dot"></div>Personalizado: 69,99 €/mes</div>
       </div>
@@ -719,18 +874,19 @@
   <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
+  </main>
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">
         <div class="footer-logo-icon">
-          <img src="media/laliebrelogo.png" alt="La Liebre logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+          <img src="media/logo.webp" alt="La Liebre logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
         </div>
         <div>
           <div class="footer-name">LA LIEBRE</div>
           <div class="footer-sub">PLANES DE RUNNING</div>
         </div>
       </div>
-      <a href="core.html" class="nav-link">CORE ↗</a>
+      <a href="contacto.html" class="nav-link">CONTACTO ↗</a>
       <a href="blog.html" class="nav-link">BLOG ↗</a>
       <p class="footer-copy">© 2026  La Liebre · Todos los derechos reservados</p>
     </div>
@@ -740,6 +896,8 @@
   <script src="script.js" defer></script>
   <script src="running.js" defer></script>
   <script src="trail.js" defer></script>
+  <script src="plan-tools.js" defer></script>
+  <script src="packs-2027.js" defer></script>
 
 </body>
 </html>

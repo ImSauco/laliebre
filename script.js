@@ -1,13 +1,14 @@
 /* --------------------------------------------------
    1. Inicializar iconos Lucide
 -------------------------------------------------- */
-lucide.createIcons();
+if (window.lucide) lucide.createIcons();
 
 
 /* --------------------------------------------------
    2. Cursor personalizado
 -------------------------------------------------- */
 const cursor = document.getElementById('cursor');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 
 /* --------------------------------------------------
@@ -25,6 +26,7 @@ const cursor = document.getElementById('cursor');
   let ticking = false;
 
   window.addEventListener('scroll', () => {
+    if (document.activeElement?.closest('#main-nav') || nav.querySelector('details[open]')) { nav.classList.remove('nav-hidden'); return; }
     if (!ticking) {
       window.requestAnimationFrame(() => {
         // Solo en móvil (< 1024px)
@@ -94,6 +96,7 @@ buildGrid('grid-cta');
    4. Partículas (canvas)
 -------------------------------------------------- */
 function initParticles(canvasId) {
+  if (reducedMotion.matches) return;
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -116,6 +119,7 @@ function initParticles(canvasId) {
   }));
 
   function animate() {
+    if (reducedMotion.matches) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     particles.forEach((p, i) => {
@@ -211,6 +215,7 @@ document.querySelectorAll('[data-counter]')
 -------------------------------------------------- */
 document.querySelectorAll('.magnetic-btn').forEach((btn) => {
   btn.addEventListener('mousemove', (e) => {
+    if (reducedMotion.matches) return;
     const rect = btn.getBoundingClientRect();
     const cx   = rect.left + rect.width  / 2;
     const cy   = rect.top  + rect.height / 2;
@@ -236,6 +241,7 @@ const heroBgText    = document.getElementById('hero-bg-text');
 const heroContentEl = heroSection.querySelector('.hero-content');
 
 window.addEventListener('scroll', () => {
+  if (reducedMotion.matches) return;
   const scrollY  = window.scrollY;
   const heroH    = heroSection.offsetHeight;
   const progress = Math.min(scrollY / heroH, 1);
